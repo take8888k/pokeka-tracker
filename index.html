@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0d0d1a">
+<title>ポケカ応募トラッカー</title>
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin: 0; padding: 0 0 60px 0;
+    min-height: 100vh;
+    background: linear-gradient(160deg,#0d0d1a 0%,#12102a 60%,#0a1628 100%);
+    background-attachment: fixed;
+    font-family: -apple-system, 'Segoe UI', 'Hiragino Sans', sans-serif;
+    color: #e8e8f0;
+  }
+  .header {
+    border-bottom: 1px solid rgba(255,255,255,0.09);
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(12px);
+    position: sticky; top: 0; z-index: 50;
+    padding: 14px 16px 0;
+  }
+  .header-inner { max-width: 780px; margin: 0 auto; }
+  .title-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .title { font-weight: 800; font-size: 18px; }
+  .subtitle { color: rgba(255,255,255,0.42); font-size: 11px; }
+  .refresh-btn {
+    margin-left: auto; background: #E91E8C; color: #fff; border: none;
+    border-radius: 9px; padding: 7px 14px; font-size: 12px; font-weight: 700; cursor: pointer;
+  }
+  .refresh-btn:disabled { background: rgba(255,255,255,0.08); }
+  .tabs { display: flex; }
+  .tab {
+    background: none; border: none; cursor: pointer; padding: 8px 18px;
+    color: rgba(255,255,255,0.42); font-size: 13px;
+    border-bottom: 2px solid transparent; font-family: inherit;
+  }
+  .tab.active { color: #fff; font-weight: 700; border-bottom: 2px solid #E91E8C; }
+  .container { max-width: 780px; margin: 0 auto; padding: 20px 16px 0; }
+  .controls { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+  select, .filter-label {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.09);
+    color: #e8e8f0; border-radius: 8px; padding: 8px 12px; font-size: 13px;
+    font-family: inherit;
+  }
+  .filter-label { display: flex; align-items: center; gap: 6px; cursor: pointer; background: none; border: none; color: rgba(255,255,255,0.42); }
+  .count { color: rgba(255,255,255,0.42); font-size: 12px; margin-left: auto; }
+  .card {
+    background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 14px; padding: 12px 14px; margin-bottom: 8px;
+  }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .meta { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; flex-wrap: wrap; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .meta-text { color: rgba(255,255,255,0.42); font-size: 11px; }
+  .relevant-tag { font-size: 10px; color: #E91E8C; background: rgba(233,30,140,0.12); padding: 1px 7px; border-radius: 7px; font-weight: 700; }
+  .tweet-text { font-size: 13px; line-height: 1.5; margin-bottom: 8px; white-space: pre-wrap; word-break: break-word; }
+  .x-link { font-size: 12px; color: #90CAF9; text-decoration: none; background: rgba(144,202,249,0.1); padding: 3px 10px; border-radius: 7px; display: inline-block; }
+  .status-pill { border: none; border-radius: 8px; padding: 4px 9px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit; flex-shrink: 0; }
+  .empty { text-align: center; color: rgba(255,255,255,0.42); padding: 60px 0; }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; }
+  .error { background: rgba(239,83,80,0.1); border: 1px solid rgba(239,83,80,0.3); border-radius: 12px; padding: 14px; margin-bottom: 16px; color: #EF9A9A; font-size: 13px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 20px; }
+  .stat-card { background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.09); border-radius: 14px; padding: 18px 16px; text-align: center; }
+  .stat-icon { font-size: 24px; margin-bottom: 6px; }
+  .stat-value { font-weight: 800; font-size: 28px; }
+  .stat-label { color: rgba(255,255,255,0.42); font-size: 12px; margin-top: 4px; }
+  .breakdown { background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.09); border-radius: 14px; padding: 16px; }
+  .breakdown-title { font-weight: 700; font-size: 14px; margin-bottom: 12px; }
+  .breakdown-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .log-box { background: rgba(0,0,0,0.25); border-radius: 12px; padding: 14px; margin-top: 12px; font-size: 12px; color: rgba(255,255,255,0.42); }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div class="title-row">
+      <span style="font-size:26px">🃏</span>
+      <div>
+        <div class="title">ポケカ応募トラッカー</div>
+        <div class="subtitle" id="subtitle">読み込み中…</div>
+      </div>
+      <button class="refresh-btn" id="refreshBt
