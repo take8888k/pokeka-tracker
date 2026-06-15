@@ -4,76 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#0d0d1a">
 <title>ポケカ応募トラッカー</title>
 <style>
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-  body {
-    margin: 0; padding: 0 0 60px 0;
-    min-height: 100vh;
-    background: linear-gradient(160deg,#0d0d1a 0%,#12102a 60%,#0a1628 100%);
-    background-attachment: fixed;
-    font-family: -apple-system, 'Segoe UI', 'Hiragino Sans', sans-serif;
-    color: #e8e8f0;
-  }
-  .header {
-    border-bottom: 1px solid rgba(255,255,255,0.09);
-    background: rgba(0,0,0,0.35);
-    backdrop-filter: blur(12px);
-    position: sticky; top: 0; z-index: 50;
-    padding: 14px 16px 0;
-  }
-  .header-inner { max-width: 780px; margin: 0 auto; }
-  .title-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-  .title { font-weight: 800; font-size: 18px; }
-  .subtitle { color: rgba(255,255,255,0.42); font-size: 11px; }
-  .refresh-btn {
-    margin-left: auto; background: #E91E8C; color: #fff; border: none;
-    border-radius: 9px; padding: 7px 14px; font-size: 12px; font-weight: 700; cursor: pointer;
-  }
-  .refresh-btn:disabled { background: rgba(255,255,255,0.08); }
-  .tabs { display: flex; }
-  .tab {
-    background: none; border: none; cursor: pointer; padding: 8px 18px;
-    color: rgba(255,255,255,0.42); font-size: 13px;
-    border-bottom: 2px solid transparent; font-family: inherit;
-  }
-  .tab.active { color: #fff; font-weight: 700; border-bottom: 2px solid #E91E8C; }
-  .container { max-width: 780px; margin: 0 auto; padding: 20px 16px 0; }
-  .controls { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
-  select, .filter-label {
-    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.09);
-    color: #e8e8f0; border-radius: 8px; padding: 8px 12px; font-size: 13px;
-    font-family: inherit;
-  }
-  .filter-label { display: flex; align-items: center; gap: 6px; cursor: pointer; background: none; border: none; color: rgba(255,255,255,0.42); }
-  .count { color: rgba(255,255,255,0.42); font-size: 12px; margin-left: auto; }
-  .card {
-    background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.09);
-    border-radius: 14px; padding: 12px 14px; margin-bottom: 8px;
-  }
-  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
-  .meta { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; flex-wrap: wrap; }
-  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-  .meta-text { color: rgba(255,255,255,0.42); font-size: 11px; }
-  .relevant-tag { font-size: 10px; color: #E91E8C; background: rgba(233,30,140,0.12); padding: 1px 7px; border-radius: 7px; font-weight: 700; }
-  .tweet-text { font-size: 13px; line-height: 1.5; margin-bottom: 8px; white-space: pre-wrap; word-break: break-word; }
-  .x-link { font-size: 12px; color: #90CAF9; text-decoration: none; background: rgba(144,202,249,0.1); padding: 3px 10px; border-radius: 7px; display: inline-block; }
-  .status-pill { border: none; border-radius: 8px; padding: 4px 9px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit; flex-shrink: 0; }
-  .empty { text-align: center; color: rgba(255,255,255,0.42); padding: 60px 0; }
-  .empty-icon { font-size: 40px; margin-bottom: 12px; }
-  .error { background: rgba(239,83,80,0.1); border: 1px solid rgba(239,83,80,0.3); border-radius: 12px; padding: 14px; margin-bottom: 16px; color: #EF9A9A; font-size: 13px; }
-  .stats-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 20px; }
-  .stat-card { background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.09); border-radius: 14px; padding: 18px 16px; text-align: center; }
-  .stat-icon { font-size: 24px; margin-bottom: 6px; }
-  .stat-value { font-weight: 800; font-size: 28px; }
-  .stat-label { color: rgba(255,255,255,0.42); font-size: 12px; margin-top: 4px; }
-  .breakdown { background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.09); border-radius: 14px; padding: 16px; }
-  .breakdown-title { font-weight: 700; font-size: 14px; margin-bottom: 12px; }
-  .breakdown-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .log-box { background: rgba(0,0,0,0.25); border-radius: 12px; padding: 14px; margin-top: 12px; font-size: 12px; color: rgba(255,255,255,0.42); }
-  .hidden { display: none; }
+  body { margin:0; padding:0 0 60px 0; min-height:100vh; background:linear-gradient(160deg,#0d0d1a,#12102a 60%,#0a1628); background-attachment:fixed; font-family:-apple-system,'Segoe UI','Hiragino Sans',sans-serif; color:#e8e8f0; }
+  .header { border-bottom:1px solid rgba(255,255,255,0.09); background:rgba(0,0,0,0.35); position:sticky; top:0; z-index:50; padding:14px 16px 0; }
+  .header-inner { max-width:780px; margin:0 auto; }
+  .title-row { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+  .title { font-weight:800; font-size:18px; }
+  .subtitle { color:rgba(255,255,255,0.42); font-size:11px; }
+  .refresh-btn { margin-left:auto; background:#E91E8C; color:#fff; border:none; border-radius:9px; padding:7px 14px; font-size:12px; font-weight:700; }
+  .tabs { display:flex; }
+  .tab { background:none; border:none; padding:8px 18px; color:rgba(255,255,255,0.42); font-size:13px; border-bottom:2px solid transparent; font-family:inherit; }
+  .tab.active { color:#fff; font-weight:700; border-bottom:2px solid #E91E8C; }
+  .container { max-width:780px; margin:0 auto; padding:20px 16px 0; }
+  .controls { display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap; align-items:center; }
+  select, .filter-label { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.09); color:#e8e8f0; border-radius:8px; padding:8px 12px; font-size:13px; font-family:inherit; }
+  .filter-label { display:flex; align-items:center; gap:6px; border:none; color:rgba(255,255,255,0.42); }
+  .count { color:rgba(255,255,255,0.42); font-size:12px; margin-left:auto; }
+  .card { background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:12px 14px; margin-bottom:8px; }
+  .card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+  .meta { display:flex; align-items:center; gap:6px; margin-bottom:5px; flex-wrap:wrap; }
+  .dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
+  .meta-text { color:rgba(255,255,255,0.42); font-size:11px; }
+  .relevant-tag { font-size:10px; color:#E91E8C; background:rgba(233,30,140,0.12); padding:1px 7px; border-radius:7px; font-weight:700; }
+  .tweet-text { font-size:13px; line-height:1.5; margin-bottom:8px; white-space:pre-wrap; word-break:break-word; }
+  .x-link { font-size:12px; color:#90CAF9; text-decoration:none; background:rgba(144,202,249,0.1); padding:3px 10px; border-radius:7px; display:inline-block; }
+  .status-pill { border:none; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; font-family:inherit; flex-shrink:0; }
+  .empty { text-align:center; color:rgba(255,255,255,0.42); padding:60px 0; }
+  .empty-icon { font-size:40px; margin-bottom:12px; }
+  .error { background:rgba(239,83,80,0.1); border:1px solid rgba(239,83,80,0.3); border-radius:12px; padding:14px; margin-bottom:16px; color:#EF9A9A; font-size:13px; }
+  .stats-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:20px; }
+  .stat-card { background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:18px 16px; text-align:center; }
+  .stat-icon { font-size:24px; margin-bottom:6px; }
+  .stat-value { font-weight:800; font-size:28px; }
+  .stat-label { color:rgba(255,255,255,0.42); font-size:12px; margin-top:4px; }
+  .breakdown { background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:16px; }
+  .breakdown-title { font-weight:700; font-size:14px; margin-bottom:12px; }
+  .breakdown-row { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .log-box { background:rgba(0,0,0,0.25); border-radius:12px; padding:14px; margin-top:12px; font-size:12px; color:rgba(255,255,255,0.42); }
+  .hidden { display:none; }
 </style>
 </head>
 <body>
@@ -85,4 +56,147 @@
         <div class="title">ポケカ応募トラッカー</div>
         <div class="subtitle" id="subtitle">読み込み中…</div>
       </div>
-      <button class="refresh-btn" id="refreshBt
+      <button class="refresh-btn" id="refreshBtn" onclick="loadData()">🔄 更新</button>
+    </div>
+    <div class="tabs">
+      <button class="tab active" id="tab-feed" onclick="switchTab('feed')">📡 フィード</button>
+      <button class="tab" id="tab-stats" onclick="switchTab('stats')">📊 集計</button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div id="error" class="error hidden"></div>
+  <div id="view-feed">
+    <div class="controls">
+      <select id="acctFilter" onchange="render()">
+        <option value="all">全アカウント</option>
+        <option value="pokecachan">ぽけかちゃん</option>
+        <option value="Zabi_pokeka">ザビ</option>
+        <option value="gamegetnavi">ゲームゲットナビ</option>
+      </select>
+      <label class="filter-label"><input type="checkbox" id="onlyRelevant" checked onchange="render()"> 応募関連のみ</label>
+      <span class="count" id="count">0件</span>
+    </div>
+    <div id="feedList"></div>
+  </div>
+  <div id="view-stats" class="hidden">
+    <div class="stats-grid" id="statsGrid"></div>
+    <div class="breakdown">
+      <div class="breakdown-title">アカウント別の応募関連投稿</div>
+      <div id="breakdownList"></div>
+    </div>
+    <div class="log-box hidden" id="logBox"></div>
+  </div>
+</div>
+<script>
+const DATA_URL = "./data/tweets.json";
+const ACCOUNTS = [
+  { handle:"pokecachan",  label:"ぽけかちゃん",     color:"#E91E8C" },
+  { handle:"Zabi_pokeka", label:"ザビ",             color:"#FF6D00" },
+  { handle:"gamegetnavi", label:"ゲームゲットナビ", color:"#1565C0" },
+];
+const STATUS_OPTIONS = [
+  { id:"none",    label:"未対応",   color:"#9E9E9E", bg:"rgba(158,158,158,0.15)" },
+  { id:"applied", label:"応募済み", color:"#42A5F5", bg:"rgba(66,165,245,0.15)" },
+  { id:"won",     label:"当選🎉",  color:"#66BB6A", bg:"rgba(102,187,106,0.15)" },
+  { id:"lost",    label:"落選",    color:"#EF5350", bg:"rgba(239,83,80,0.15)" },
+  { id:"skip",    label:"見送り",  color:"#777",    bg:"rgba(120,120,120,0.12)" },
+];
+let DATA = null, STATUSES = {}, currentTab = "feed";
+try { STATUSES = JSON.parse(localStorage.getItem("pokeka_statuses") || "{}"); } catch(e) {}
+function saveStatuses(){ try { localStorage.setItem("pokeka_statuses", JSON.stringify(STATUSES)); } catch(e){} }
+function acctOf(h){ return ACCOUNTS.find(a => a.handle === h); }
+function fmtDate(s){ if(!s) return ""; const d = new Date(s); if(isNaN(d)) return s; return (d.getMonth()+1)+"/"+d.getDate(); }
+function esc(s){ return String(s||"").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+async function loadData(){
+  const btn = document.getElementById("refreshBtn");
+  btn.disabled = true; btn.textContent = "⏳";
+  document.getElementById("error").classList.add("hidden");
+  try {
+    const res = await fetch(DATA_URL + "?t=" + Date.now());
+    if(!res.ok) throw new Error("HTTP " + res.status);
+    DATA = await res.json();
+    document.getElementById("subtitle").textContent = DATA.updated ? "最終更新: " + new Date(DATA.updated).toLocaleString("ja-JP") : "";
+  } catch(e) {
+    const err = document.getElementById("error");
+    err.textContent = "データを読み込めませんでした（" + e.message + "）。少し待ってから更新してください。";
+    err.classList.remove("hidden");
+  }
+  btn.disabled = false; btn.textContent = "🔄 更新";
+  render();
+}
+function switchTab(tab){
+  currentTab = tab;
+  document.getElementById("tab-feed").classList.toggle("active", tab==="feed");
+  document.getElementById("tab-stats").classList.toggle("active", tab==="stats");
+  document.getElementById("view-feed").classList.toggle("hidden", tab!=="feed");
+  document.getElementById("view-stats").classList.toggle("hidden", tab!=="stats");
+  render();
+}
+function setStatus(id, val){ STATUSES[id] = val; saveStatuses(); render(); }
+window.setStatus = setStatus;
+function render(){
+  const tweets = (DATA && DATA.tweets) || [];
+  if(currentTab === "feed"){
+    const acctFilter = document.getElementById("acctFilter").value;
+    const onlyRelevant = document.getElementById("onlyRelevant").checked;
+    const filtered = tweets.filter(t => {
+      if(acctFilter !== "all" && t.account !== acctFilter) return false;
+      if(onlyRelevant && !t.relevant) return false;
+      return true;
+    });
+    document.getElementById("count").textContent = filtered.length + "件";
+    const list = document.getElementById("feedList");
+    if(filtered.length === 0){
+      list.innerHTML = '<div class="empty"><div class="empty-icon">📡</div><div>該当する投稿がありません</div></div>';
+    } else {
+      list.innerHTML = filtered.map(t => {
+        const acct = acctOf(t.account);
+        const st = STATUSES[t.id] || "none";
+        const opts = STATUS_OPTIONS.map(o => '<option value="'+o.id+'"'+(o.id===st?' selected':'')+'>'+o.label+'</option>').join("");
+        const stObj = STATUS_OPTIONS.find(o => o.id === st) || STATUS_OPTIONS[0];
+        const safeId = esc(t.id).replace(/'/g, "\\'");
+        return '<div class="card" style="opacity:'+(st==="skip"?0.55:1)+'"><div class="card-head"><div style="flex:1">'
+          + '<div class="meta"><span class="dot" style="background:'+(acct?acct.color:"#888")+'"></span>'
+          + '<span class="meta-text">'+esc(acct?acct.label:t.account)+'</span>'
+          + (t.pubDate?'<span class="meta-text">· '+fmtDate(t.pubDate)+'</span>':'')
+          + (t.relevant?'<span class="relevant-tag">応募関連</span>':'')+'</div>'
+          + '<div class="tweet-text">'+esc(t.text)+'</div>'
+          + '<a class="x-link" href="'+esc(t.link)+'" target="_blank" rel="noreferrer">🔗 Xで見る</a></div>'
+          + '<select class="status-pill" style="background:'+stObj.bg+';color:'+stObj.color+'" onchange="setStatus(\''+safeId+'\', this.value)">'+opts+'</select>'
+          + '</div></div>';
+      }).join("");
+    }
+  } else {
+    const relevant = tweets.filter(t => t.relevant).length;
+    const sv = Object.values(STATUSES);
+    const applied = sv.filter(s => s==="applied").length;
+    const won = sv.filter(s => s==="won").length;
+    const lost = sv.filter(s => s==="lost").length;
+    const fin = sv.filter(s => s==="won"||s==="lost").length;
+    const winRate = fin ? Math.round(won/fin*100)+"%" : "—";
+    const cards = [
+      {label:"取得投稿数",value:tweets.length,icon:"📦",color:"#90CAF9"},
+      {label:"応募関連",value:relevant,icon:"🎯",color:"#F48FB1"},
+      {label:"応募済み",value:applied,icon:"✅",color:"#A5D6A7"},
+      {label:"当選",value:won,icon:"🏆",color:"#FFD54F"},
+      {label:"落選",value:lost,icon:"💔",color:"#EF9A9A"},
+      {label:"当選率",value:winRate,icon:"📈",color:"#CE93D8"},
+    ];
+    document.getElementById("statsGrid").innerHTML = cards.map(c => '<div class="stat-card"><div class="stat-icon">'+c.icon+'</div><div class="stat-value" style="color:'+c.color+'">'+c.value+'</div><div class="stat-label">'+c.label+'</div></div>').join("");
+    document.getElementById("breakdownList").innerHTML = ACCOUNTS.map(a => {
+      const cnt = tweets.filter(t => t.account===a.handle && t.relevant).length;
+      const total = tweets.filter(t => t.account===a.handle).length;
+      return '<div class="breakdown-row"><span class="dot" style="background:'+a.color+'"></span><span style="flex:1;font-size:13px">'+esc(a.label)+'</span><span style="color:#E91E8C;font-size:13px;font-weight:700">'+cnt+'件</span><span style="color:rgba(255,255,255,0.42);font-size:11px">/ 全'+total+'件</span></div>';
+    }).join("");
+    const logBox = document.getElementById("logBox");
+    if(DATA && DATA.log){
+      logBox.innerHTML = '<div style="margin-bottom:6px;font-weight:700">📋 最終取得ログ</div>' + DATA.log.map(l => '<div>'+esc(l)+'</div>').join("");
+      logBox.classList.remove("hidden");
+    } else { logBox.classList.add("hidden"); }
+  }
+}
+loadData();
+</script>
+</body>
+</html>
