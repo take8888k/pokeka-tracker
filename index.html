@@ -7,195 +7,183 @@
 <meta name="theme-color" content="#0d0d1a">
 <title>ポケカ応募トラッカー</title>
 <style>
-  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-  body { margin:0; padding:0 0 60px 0; min-height:100vh; background:linear-gradient(160deg,#0d0d1a,#12102a 60%,#0a1628); background-attachment:fixed; font-family:-apple-system,'Segoe UI','Hiragino Sans',sans-serif; color:#e8e8f0; }
-  .header { border-bottom:1px solid rgba(255,255,255,0.09); background:rgba(0,0,0,0.35); position:sticky; top:0; z-index:50; padding:14px 16px 0; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; padding:0 0 60px 0; min-height:100vh; background:linear-gradient(160deg,#0d0d1a,#12102a 60%,#0a1628); background-attachment:fixed; font-family:-apple-system,'Segoe UI','Hiragino Sans',sans-serif; color:#e8e8f0; position:relative; overflow-x:hidden; }
+  .bg-balls { position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
+  .bg-balls .b { position:absolute; }
+  .header { border-bottom:1px solid rgba(255,255,255,0.09); background:rgba(0,0,0,0.4); position:sticky; top:0; z-index:50; padding:14px 16px 0; backdrop-filter:blur(8px); }
   .header-inner { max-width:780px; margin:0 auto; }
-  .title-row { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+  .title-row { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
   .title { font-weight:800; font-size:18px; }
   .subtitle { color:rgba(255,255,255,0.42); font-size:11px; }
   .refresh-btn { margin-left:auto; background:#E91E8C; color:#fff; border:none; border-radius:9px; padding:7px 14px; font-size:12px; font-weight:700; }
-  .tabs { display:flex; }
-  .tab { background:none; border:none; padding:8px 18px; color:rgba(255,255,255,0.42); font-size:13px; border-bottom:2px solid transparent; font-family:inherit; }
+  .tabs { display:flex; overflow-x:auto; scrollbar-width:none; }
+  .tabs::-webkit-scrollbar { display:none; }
+  .tab { background:none; border:none; padding:8px 12px; white-space:nowrap; color:rgba(255,255,255,0.42); font-size:13px; border-bottom:2px solid transparent; font-family:inherit; }
   .tab.active { color:#fff; font-weight:700; border-bottom:2px solid #E91E8C; }
-  .container { max-width:780px; margin:0 auto; padding:20px 16px 0; }
-  .controls { display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap; align-items:center; }
-  select, .filter-label { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.09); color:#e8e8f0; border-radius:8px; padding:8px 12px; font-size:13px; font-family:inherit; }
-  .filter-label { display:flex; align-items:center; gap:6px; border:none; color:rgba(255,255,255,0.42); }
-  .count { color:rgba(255,255,255,0.42); font-size:12px; margin-left:auto; }
-  .card { background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:12px 14px; margin-bottom:8px; }
-  .card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
-  .meta { display:flex; align-items:center; gap:6px; margin-bottom:5px; flex-wrap:wrap; }
-  .dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
-  .meta-text { color:rgba(255,255,255,0.42); font-size:11px; }
+  .container { max-width:780px; margin:0 auto; padding:16px 16px 0; position:relative; z-index:1; }
+  .search-box { width:100%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.09); color:#e8e8f0; border-radius:10px; padding:10px 14px; font-size:14px; font-family:inherit; margin-bottom:12px; }
+  .banner { background:linear-gradient(90deg,rgba(183,28,28,0.25),rgba(230,81,0,0.18)); border:1px solid rgba(230,81,0,0.4); border-radius:12px; padding:12px 14px; margin-bottom:14px; }
+  .banner-title { font-size:12px; font-weight:800; color:#FFAB91; margin-bottom:6px; }
+  .banner-item { font-size:13px; color:#fff; padding:2px 0; }
+  .card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:14px; margin-bottom:10px; backdrop-filter:blur(2px); }
+  .dl-row { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px; }
+  .dl-tag { font-size:13px; font-weight:800; padding:4px 12px; border-radius:9px; }
+  .status-pill { border:none; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; font-family:inherit; }
+  .field { display:flex; gap:8px; margin-bottom:6px; }
+  .field-label { color:rgba(255,255,255,0.42); font-size:11px; min-width:36px; flex-shrink:0; }
+  .field-store { color:#e8e8f0; font-size:14px; font-weight:700; }
+  .field-text { color:#e8e8f0; font-size:13px; line-height:1.5; word-break:break-word; }
+  .field-src { color:rgba(255,255,255,0.42); font-size:12px; display:flex; align-items:center; gap:5px; flex-wrap:wrap; }
+  .dot { width:7px; height:7px; border-radius:50%; display:inline-block; }
+  .merge-tag { font-size:10px; color:#E91E8C; background:rgba(233,30,140,0.12); padding:1px 6px; border-radius:6px; font-weight:700; }
+  .memo { width:100%; background:rgba(255,255,255,0.04); border:1px dashed rgba(255,255,255,0.15); color:#e8e8f0; border-radius:8px; padding:7px 10px; font-size:12px; font-family:inherit; margin:8px 0 6px; resize:vertical; }
+  .btn-row { display:flex; gap:6px; margin-top:6px; align-items:center; }
+  .apply-btn { flex:1; text-align:center; font-size:14px; font-weight:700; color:#fff; text-decoration:none; padding:11px; border-radius:9px; border:none; font-family:inherit; }
+  .apply-net { background:#E91E8C; }
+  .apply-shop { background:#43A047; }
+  .apply-none { flex:1; text-align:center; font-size:12px; color:rgba(255,255,255,0.42); background:rgba(255,255,255,0.05); padding:11px; border-radius:9px; }
+  .apply-shop-none { flex:1; text-align:center; font-size:12px; color:#A5D6A7; background:rgba(67,160,71,0.12); padding:11px; border-radius:9px; }
+  .x-btn { font-size:12px; color:#90CAF9; text-decoration:none; background:rgba(144,202,249,0.1); padding:11px 12px; border-radius:9px; }
+  .line-btn { font-size:12px; font-weight:700; color:#fff; background:#06C755; border:none; border-radius:9px; padding:11px 12px; font-family:inherit; }
+  .ex-btn { font-size:13px; color:rgba(255,255,255,0.35); background:none; border:none; padding:6px; font-family:inherit; }
+  .restore-btn { font-size:12px; color:#90CAF9; background:rgba(144,202,249,0.1); border:none; border-radius:8px; padding:7px 12px; font-family:inherit; }
+  .confirm-box { margin-top:10px; background:rgba(239,83,80,0.08); border:1px solid rgba(239,83,80,0.3); border-radius:10px; padding:10px 12px; }
+  .full-text { font-size:13px; line-height:1.5; white-space:pre-wrap; word-break:break-word; margin-bottom:8px; }
   .relevant-tag { font-size:10px; color:#E91E8C; background:rgba(233,30,140,0.12); padding:1px 7px; border-radius:7px; font-weight:700; }
-  .tweet-text { font-size:13px; line-height:1.5; margin-bottom:8px; white-space:pre-wrap; word-break:break-word; }
-  .x-link { font-size:12px; color:#90CAF9; text-decoration:none; background:rgba(144,202,249,0.1); padding:3px 10px; border-radius:7px; display:inline-block; }
-  .status-pill { border:none; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; font-family:inherit; flex-shrink:0; }
   .empty { text-align:center; color:rgba(255,255,255,0.42); padding:60px 0; }
   .empty-icon { font-size:40px; margin-bottom:12px; }
   .error { background:rgba(239,83,80,0.1); border:1px solid rgba(239,83,80,0.3); border-radius:12px; padding:14px; margin-bottom:16px; color:#EF9A9A; font-size:13px; }
   .stats-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:20px; }
-  .stat-card { background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:18px 16px; text-align:center; }
+  .stat-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:18px 16px; text-align:center; }
   .stat-icon { font-size:24px; margin-bottom:6px; }
   .stat-value { font-weight:800; font-size:28px; }
   .stat-label { color:rgba(255,255,255,0.42); font-size:12px; margin-top:4px; }
-  .breakdown { background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:16px; }
+  .breakdown { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:16px; }
   .breakdown-title { font-weight:700; font-size:14px; margin-bottom:12px; }
   .breakdown-row { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
   .log-box { background:rgba(0,0,0,0.25); border-radius:12px; padding:14px; margin-top:12px; font-size:12px; color:rgba(255,255,255,0.42); }
   .hidden { display:none; }
+  /* ボール演出 */
+  #ballOverlay { position:fixed; inset:0; z-index:999; display:none; align-items:center; justify-content:center; }
+  #ballOverlay.show { display:flex; }
+  @keyframes ballPop { 0%{transform:scale(0) rotate(-20deg);opacity:0;} 35%{transform:scale(1.3) rotate(10deg);opacity:1;} 55%{transform:scale(0.95) rotate(-5deg);} 70%{transform:scale(1.1);} 100%{transform:scale(1) rotate(0);opacity:1;} }
+  @keyframes sparkle { 0%,100%{opacity:0.2;transform:scale(0.8);} 50%{opacity:1;transform:scale(1.3);} }
+  @keyframes shake { 0%,100%{transform:translateX(0);} 25%{transform:translateX(-6px);} 75%{transform:translateX(6px);} }
 </style>
 </head>
 <body>
+<div class="bg-balls" id="bgBalls"></div>
+
 <div class="header">
   <div class="header-inner">
     <div class="title-row">
       <span style="font-size:26px">🃏</span>
-      <div>
-        <div class="title">ポケカ応募トラッカー</div>
-        <div class="subtitle" id="subtitle">読み込み中…</div>
-      </div>
+      <div><div class="title">ポケカ応募トラッカー</div><div class="subtitle" id="subtitle">読み込み中…</div></div>
       <button class="refresh-btn" id="refreshBtn" onclick="loadData()">🔄 更新</button>
     </div>
-    <div class="tabs">
-      <button class="tab active" id="tab-feed" onclick="switchTab('feed')">📡 フィード</button>
-      <button class="tab" id="tab-stats" onclick="switchTab('stats')">📊 集計</button>
+    <div class="tabs" id="tabBar">
+      <button class="tab active" data-tab="net"   onclick="switchTab('net')">🌐 ネット応募</button>
+      <button class="tab"        data-tab="shop"  onclick="switchTab('shop')">🏬 店舗応募</button>
+      <button class="tab"        data-tab="done"  onclick="switchTab('done')">✅ 応募済み</button>
+      <button class="tab"        data-tab="excl"  onclick="switchTab('excl')">🚫 除外済み</button>
+      <button class="tab"        data-tab="all"   onclick="switchTab('all')">📡 全フィード</button>
+      <button class="tab"        data-tab="stats" onclick="switchTab('stats')">📊 集計</button>
     </div>
   </div>
 </div>
-<div class="container">
-  <div id="error" class="error hidden"></div>
-  <div id="view-feed">
-    <div class="controls">
-      <select id="acctFilter" onchange="render()">
-        <option value="all">全アカウント</option>
-        <option value="pokecachan">ぽけかちゃん</option>
-        <option value="Zabi_pokeka">ザビ</option>
-        <option value="gamegetnavi">ゲームゲットナビ</option>
-      </select>
-      <label class="filter-label"><input type="checkbox" id="onlyRelevant" checked onchange="render()"> 応募関連のみ</label>
-      <span class="count" id="count">0件</span>
-    </div>
-    <div id="feedList"></div>
-  </div>
-  <div id="view-stats" class="hidden">
-    <div class="stats-grid" id="statsGrid"></div>
-    <div class="breakdown">
-      <div class="breakdown-title">アカウント別の応募関連投稿</div>
-      <div id="breakdownList"></div>
-    </div>
-    <div class="log-box hidden" id="logBox"></div>
-  </div>
-</div>
-<script>
-const DATA_URL = "./data/tweets.json";
-const ACCOUNTS = [
-  { handle:"pokecachan",  label:"ぽけかちゃん",     color:"#E91E8C" },
-  { handle:"Zabi_pokeka", label:"ザビ",             color:"#FF6D00" },
-  { handle:"gamegetnavi", label:"ゲームゲットナビ", color:"#1565C0" },
-];
-const STATUS_OPTIONS = [
-  { id:"none",    label:"未対応",   color:"#9E9E9E", bg:"rgba(158,158,158,0.15)" },
-  { id:"applied", label:"応募済み", color:"#42A5F5", bg:"rgba(66,165,245,0.15)" },
-  { id:"won",     label:"当選🎉",  color:"#66BB6A", bg:"rgba(102,187,106,0.15)" },
-  { id:"lost",    label:"落選",    color:"#EF5350", bg:"rgba(239,83,80,0.15)" },
-  { id:"skip",    label:"見送り",  color:"#777",    bg:"rgba(120,120,120,0.12)" },
-];
-let DATA = null, STATUSES = {}, currentTab = "feed";
-try { STATUSES = JSON.parse(localStorage.getItem("pokeka_statuses") || "{}"); } catch(e) {}
-function saveStatuses(){ try { localStorage.setItem("pokeka_statuses", JSON.stringify(STATUSES)); } catch(e){} }
-function acctOf(h){ return ACCOUNTS.find(a => a.handle === h); }
-function fmtDate(s){ if(!s) return ""; const d = new Date(s); if(isNaN(d)) return s; return (d.getMonth()+1)+"/"+d.getDate(); }
-function esc(s){ return String(s||"").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-async function loadData(){
-  const btn = document.getElementById("refreshBtn");
-  btn.disabled = true; btn.textContent = "⏳";
-  document.getElementById("error").classList.add("hidden");
-  try {
-    const res = await fetch(DATA_URL + "?t=" + Date.now());
-    if(!res.ok) throw new Error("HTTP " + res.status);
-    DATA = await res.json();
-    document.getElementById("subtitle").textContent = DATA.updated ? "最終更新: " + new Date(DATA.updated).toLocaleString("ja-JP") : "";
-  } catch(e) {
-    const err = document.getElementById("error");
-    err.textContent = "データを読み込めませんでした（" + e.message + "）。少し待ってから更新してください。";
-    err.classList.remove("hidden");
-  }
-  btn.disabled = false; btn.textContent = "🔄 更新";
-  render();
+
+< truncated lines 96-277 >
+    + '<div class="field"><span class="field-label">🏪 店名</span><span class="field-store">'+(store?esc(store):"（記載なし）")+'</span></div>'
+    + '<div class="field"><span class="field-label">📝 内容</span><span class="field-text">'+esc(summary)+'</span></div>'
+    + '<div class="field"><span class="field-label">📡 元</span><span class="field-src">'+accDots(g.accounts)+esc(accNames(g.accounts))+(g.accounts.size>1?' <span class="merge-tag">'+g.accounts.size+'件統合</span>':'')+'</span></div>'
+    + '<textarea class="memo" rows="1" placeholder="📝 メモ（ID登録済み 等）" oninput="setMemo(\''+safeId+'\', this.value)">'+memo+'</textarea>'
+    + '<div class="btn-row">'+rightBtns+'</div>'
+    + confirmBox
+    + '</div>';
 }
-function switchTab(tab){
-  currentTab = tab;
-  document.getElementById("tab-feed").classList.toggle("active", tab==="feed");
-  document.getElementById("tab-stats").classList.toggle("active", tab==="stats");
-  document.getElementById("view-feed").classList.toggle("hidden", tab!=="feed");
-  document.getElementById("view-stats").classList.toggle("hidden", tab!=="stats");
-  render();
+
+// LINE共有
+function shareLine(id){
+  const tweets=(DATA&&DATA.tweets)||[];
+  const relevant = tweets.filter(t => t.relevant || isLikelyApply(t.text));
+  const g = groupByUrl(relevant).find(x=>x.id===id);
+  if(!g) return;
+  const info=deadlineInfo(g.text);
+  const store=extractStore(g.text)||"";
+  const dl=info?(info.month+"/"+info.day+"まで"):"";
+  const head="🃏ポケカ応募"+(store?"【"+store+"】":"")+(dl?" "+dl:"");
+  const body=extractSummary(g.text);
+  const url=g.url||g.links[0]||"";
+  const msg=[head,body,url].filter(Boolean).join("\n");
+  window.open("https://line.me/R/share?text="+encodeURIComponent(msg),"_blank","noopener");
 }
-function setStatus(id, val){ STATUSES[id] = val; saveStatuses(); render(); }
-window.setStatus = setStatus;
+window.shareLine=shareLine;
+
 function render(){
-  const tweets = (DATA && DATA.tweets) || [];
-  if(currentTab === "feed"){
-    const acctFilter = document.getElementById("acctFilter").value;
-    const onlyRelevant = document.getElementById("onlyRelevant").checked;
-    const filtered = tweets.filter(t => {
-      if(acctFilter !== "all" && t.account !== acctFilter) return false;
-      if(onlyRelevant && !t.relevant) return false;
-      return true;
-    });
-    document.getElementById("count").textContent = filtered.length + "件";
-    const list = document.getElementById("feedList");
-    if(filtered.length === 0){
-      list.innerHTML = '<div class="empty"><div class="empty-icon">📡</div><div>該当する投稿がありません</div></div>';
-    } else {
-      list.innerHTML = filtered.map(t => {
-        const acct = acctOf(t.account);
-        const st = STATUSES[t.id] || "none";
-        const opts = STATUS_OPTIONS.map(o => '<option value="'+o.id+'"'+(o.id===st?' selected':'')+'>'+o.label+'</option>').join("");
-        const stObj = STATUS_OPTIONS.find(o => o.id === st) || STATUS_OPTIONS[0];
-        const safeId = esc(t.id).replace(/'/g, "\\'");
-        return '<div class="card" style="opacity:'+(st==="skip"?0.55:1)+'"><div class="card-head"><div style="flex:1">'
-          + '<div class="meta"><span class="dot" style="background:'+(acct?acct.color:"#888")+'"></span>'
-          + '<span class="meta-text">'+esc(acct?acct.label:t.account)+'</span>'
-          + (t.pubDate?'<span class="meta-text">· '+fmtDate(t.pubDate)+'</span>':'')
-          + (t.relevant?'<span class="relevant-tag">応募関連</span>':'')+'</div>'
-          + '<div class="tweet-text">'+esc(t.text)+'</div>'
-          + '<a class="x-link" href="'+esc(t.link)+'" target="_blank" rel="noreferrer">🔗 Xで見る</a></div>'
-          + '<select class="status-pill" style="background:'+stObj.bg+';color:'+stObj.color+'" onchange="setStatus(\''+safeId+'\', this.value)">'+opts+'</select>'
-          + '</div></div>';
-      }).join("");
+  const tweets=(DATA&&DATA.tweets)||[];
+  const cardTabs=["net","shop","done","excl"];
+  if(cardTabs.includes(currentTab)){
+    const kw=(document.getElementById("searchBox").value||"").trim().toLowerCase();
+    let base=tweets.filter(t=>t.relevant||isLikelyApply(t.text));
+    let groups=groupByUrl(base);
+    if(currentTab==="excl"){
+      let ex=groups.filter(g=>EXCLUDED[g.id]); if(kw) ex=ex.filter(g=>(g.text||"").toLowerCase().includes(kw));
+      document.getElementById("banner").innerHTML="";
+      document.getElementById("cardList").innerHTML = ex.length?ex.map(g=>cardHtml(g,deadlineInfo(g.text),isShopVisit(g.text),{excluded:true,dim:true})).join(""):'<div class="empty"><div class="empty-icon">🚫</div><div>除外したものはありません</div></div>';
+      return;
     }
+    groups=groups.filter(g=>!EXCLUDED[g.id]);
+    let enriched=groups.map(g=>({g,info:deadlineInfo(g.text),shop:isShopVisit(g.text),done:["applied","won","lost","skip"].includes(STATUSES[g.id])}));
+    if(kw) enriched=enriched.filter(x=>(x.g.text||"").toLowerCase().includes(kw));
+    if(currentTab==="done"){
+      const done=enriched.filter(x=>x.done);
+      document.getElementById("banner").innerHTML="";
+      document.getElementById("cardList").innerHTML = done.length?done.map(x=>cardHtml(x.g,x.info,x.shop,{dim:false})).join(""):'<div class="empty"><div class="empty-icon">✅</div><div>応募済みはまだありません</div></div>';
+      return;
+    }
+    let list=enriched.filter(x=> currentTab==="shop" ? x.shop : !x.shop);
+    list.sort((a,b)=>{ if(a.done!==b.done) return a.done?1:-1; const ka=a.info?(a.info.days<0?88888+Math.abs(a.info.days):a.info.days):77777; const kb=b.info?(b.info.days<0?88888+Math.abs(b.info.days):b.info.days):77777; return ka-kb; });
+    renderBanner(list);
+    document.getElementById("cardList").innerHTML = list.length?list.map(x=>cardHtml(x.g,x.info,x.shop,{dim:x.done})).join(""):'<div class="empty"><div class="empty-icon">'+(currentTab==="shop"?"🏬":"🌐")+'</div><div>該当する応募がありません</div></div>';
+  } else if(currentTab==="all"){
+    const acctFilter=document.getElementById("acctFilter").value, onlyRelevant=document.getElementById("onlyRelevant").checked;
+    const filtered=tweets.filter(t=>{ if(acctFilter!=="all"&&t.account!==acctFilter) return false; if(onlyRelevant&&!t.relevant) return false; return true; });
+    document.getElementById("count").textContent=filtered.length+"件";
+    document.getElementById("allList").innerHTML = filtered.length?filtered.map(t=>{
+      const acct=acctOf(t.account), st=STATUSES[t.id]||"none", stObj=STATUS_OPTIONS.find(o=>o.id===st)||STATUS_OPTIONS[0], safeId=esc(t.id).replace(/'/g,"\\'");
+      return '<div class="card"><div class="dl-row"><span class="field-src"><span class="dot" style="background:'+(acct?acct.color:"#888")+'"></span>'+esc(acct?acct.label:t.account)+(t.relevant?' <span class="relevant-tag">応募関連</span>':'')+'</span>'
+        +'<select class="status-pill" style="background:'+stObj.bg+';color:'+stObj.color+'" onchange="setStatus(\''+safeId+'\', this.value)">'+STATUS_OPTIONS.map(o=>'<option value="'+o.id+'"'+(o.id===st?' selected':'')+'>'+o.label+'</option>').join("")+'</select></div>'
+        +'<div class="full-text">'+esc(t.text)+'</div><div class="btn-row"><a class="x-btn" href="'+esc(t.link)+'" target="_blank" rel="noreferrer">🔗 Xで見る</a></div></div>';
+    }).join(""):'<div class="empty"><div class="empty-icon">📡</div><div>該当する投稿がありません</div></div>';
   } else {
-    const relevant = tweets.filter(t => t.relevant).length;
-    const sv = Object.values(STATUSES);
-    const applied = sv.filter(s => s==="applied").length;
-    const won = sv.filter(s => s==="won").length;
-    const lost = sv.filter(s => s==="lost").length;
-    const fin = sv.filter(s => s==="won"||s==="lost").length;
-    const winRate = fin ? Math.round(won/fin*100)+"%" : "—";
-    const cards = [
-      {label:"取得投稿数",value:tweets.length,icon:"📦",color:"#90CAF9"},
-      {label:"応募関連",value:relevant,icon:"🎯",color:"#F48FB1"},
-      {label:"応募済み",value:applied,icon:"✅",color:"#A5D6A7"},
-      {label:"当選",value:won,icon:"🏆",color:"#FFD54F"},
-      {label:"落選",value:lost,icon:"💔",color:"#EF9A9A"},
-      {label:"当選率",value:winRate,icon:"📈",color:"#CE93D8"},
-    ];
-    document.getElementById("statsGrid").innerHTML = cards.map(c => '<div class="stat-card"><div class="stat-icon">'+c.icon+'</div><div class="stat-value" style="color:'+c.color+'">'+c.value+'</div><div class="stat-label">'+c.label+'</div></div>').join("");
-    document.getElementById("breakdownList").innerHTML = ACCOUNTS.map(a => {
-      const cnt = tweets.filter(t => t.account===a.handle && t.relevant).length;
-      const total = tweets.filter(t => t.account===a.handle).length;
-      return '<div class="breakdown-row"><span class="dot" style="background:'+a.color+'"></span><span style="flex:1;font-size:13px">'+esc(a.label)+'</span><span style="color:#E91E8C;font-size:13px;font-weight:700">'+cnt+'件</span><span style="color:rgba(255,255,255,0.42);font-size:11px">/ 全'+total+'件</span></div>';
-    }).join("");
-    const logBox = document.getElementById("logBox");
-    if(DATA && DATA.log){
-      logBox.innerHTML = '<div style="margin-bottom:6px;font-weight:700">📋 最終取得ログ</div>' + DATA.log.map(l => '<div>'+esc(l)+'</div>').join("");
-      logBox.classList.remove("hidden");
-    } else { logBox.classList.add("hidden"); }
+    const relevant=tweets.filter(t=>t.relevant).length, sv=Object.values(STATUSES);
+    const applied=sv.filter(s=>s==="applied").length, won=sv.filter(s=>s==="won").length, lost=sv.filter(s=>s==="lost").length;
+    const fin=won+lost, winRate=fin?Math.round(won/fin*100)+"%":"—";
+    const cards=[{label:"取得投稿数",value:tweets.length,icon:"📦",color:"#90CAF9"},{label:"応募関連",value:relevant,icon:"🎯",color:"#F48FB1"},{label:"応募済み",value:applied,icon:"✅",color:"#A5D6A7"},{label:"当選",value:won,icon:"🏆",color:"#FFD54F"},{label:"落選",value:lost,icon:"💔",color:"#EF9A9A"},{label:"当選率",value:winRate,icon:"📈",color:"#CE93D8"}];
+    document.getElementById("statsGrid").innerHTML=cards.map(c=>'<div class="stat-card"><div class="stat-icon">'+c.icon+'</div><div class="stat-value" style="color:'+c.color+'">'+c.value+'</div><div class="stat-label">'+c.label+'</div></div>').join("");
+    document.getElementById("breakdownList").innerHTML=ACCOUNTS.map(a=>{const cnt=tweets.filter(t=>t.account===a.handle&&t.relevant).length; const total=tweets.filter(t=>t.account===a.handle).length; return '<div class="breakdown-row"><span class="dot" style="background:'+a.color+'"></span><span style="flex:1;font-size:13px">'+esc(a.label)+'</span><span style="color:#E91E8C;font-size:13px;font-weight:700">'+cnt+'件</span><span style="color:rgba(255,255,255,0.42);font-size:11px">/ 全'+total+'件</span></div>';}).join("");
+    const logBox=document.getElementById("logBox");
+    if(DATA&&DATA.log){ logBox.innerHTML='<div style="margin-bottom:6px;font-weight:700">📋 最終取得ログ</div>'+DATA.log.map(l=>'<div>'+esc(l)+'</div>').join(""); logBox.classList.remove("hidden"); } else logBox.classList.add("hidden");
   }
 }
+function renderBanner(list){
+  const el=document.getElementById("banner");
+  const urgent=list.filter(x=>x.info&&x.info.days>=0&&x.info.days<=1&&!x.done);
+  if(urgent.length===0){ el.innerHTML=""; return; }
+  el.innerHTML='<div class="banner"><div class="banner-title">🚨 まもなく締切（今日・明日）</div>'
+    +urgent.slice(0,5).map(x=>{ const store=extractStore(x.g.text)||extractSummary(x.g.text).slice(0,20); return '<div class="banner-item">・'+(x.info.days===0?"本日":"明日")+' '+x.info.month+'/'+x.info.day+'｜'+esc(store)+'</div>'; }).join("")+'</div>';
+}
+
+// スワイプ
+(function(){
+  let sx=0,sy=0,tr=false; const area=document.getElementById("swipeArea");
+  area.addEventListener("touchstart",e=>{ if(e.touches.length!==1) return; sx=e.touches[0].clientX; sy=e.touches[0].clientY; tr=true; },{passive:true});
+  area.addEventListener("touchend",e=>{ if(!tr) return; tr=false; const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy; if(Math.abs(dx)<60||Math.abs(dx)<Math.abs(dy)*1.5) return; const i=TAB_ORDER.indexOf(currentTab); if(dx<0&&i<TAB_ORDER.length-1) switchTab(TAB_ORDER[i+1]); else if(dx>0&&i>0) switchTab(TAB_ORDER[i-1]); },{passive:true});
+})();
+
+window.__confirmId=null;
+initBgBalls();
 loadData();
 </script>
 </body>
