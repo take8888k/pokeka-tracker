@@ -64,7 +64,6 @@
   .breakdown-row { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
   .log-box { background:rgba(0,0,0,0.25); border-radius:12px; padding:14px; margin-top:12px; font-size:12px; color:rgba(255,255,255,0.42); }
   .hidden { display:none; }
-  /* ボール演出 */
   #ballOverlay { position:fixed; inset:0; z-index:999; display:none; align-items:center; justify-content:center; }
   #ballOverlay.show { display:flex; }
   @keyframes ballPop { 0%{transform:scale(0) rotate(-20deg);opacity:0;} 35%{transform:scale(1.3) rotate(10deg);opacity:1;} 55%{transform:scale(0.95) rotate(-5deg);} 70%{transform:scale(1.1);} 100%{transform:scale(1) rotate(0);opacity:1;} }
@@ -74,7 +73,6 @@
 </head>
 <body>
 <div class="bg-balls" id="bgBalls"></div>
-
 <div class="header">
   <div class="header-inner">
     <div class="title-row">
@@ -92,8 +90,176 @@
     </div>
   </div>
 </div>
-
-< truncated lines 96-277 >
+<div class="container" id="swipeArea">
+  <div id="error" class="error hidden"></div>
+  <input class="search-box hidden" id="searchBox" placeholder="🔍 商品名・店名で検索…" oninput="render()">
+  <div id="banner"></div>
+  <div id="view-cards"><div id="cardList"></div></div>
+  <div id="view-all" class="hidden">
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center">
+      <select id="acctFilter" onchange="render()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.09);color:#e8e8f0;border-radius:8px;padding:8px 12px;font-size:13px"><option value="all">全アカウント</option></select>
+      <label style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.42);font-size:13px"><input type="checkbox" id="onlyRelevant" checked onchange="render()"> 応募関連のみ</label>
+      <span id="count" style="color:rgba(255,255,255,0.42);font-size:12px;margin-left:auto">0件</span>
+    </div>
+    <div id="allList"></div>
+  </div>
+  <div id="view-stats" class="hidden">
+    <div class="stats-grid" id="statsGrid"></div>
+    <div class="breakdown"><div class="breakdown-title">アカウント別の応募関連投稿</div><div id="breakdownList"></div></div>
+    <div class="log-box hidden" id="logBox"></div>
+  </div>
+</div>
+<div id="ballOverlay"><div id="ballInner"></div></div>
+<script>
+const DATA_URL = "./data/tweets.json";
+const TAB_ORDER = ["net","shop","done","excl","all","stats"];
+const ACCOUNTS = [
+  { handle:"pokecachan",      label:"ぽけかちゃん",       color:"#E91E8C" },
+  { handle:"Zabi_pokeka",     label:"ザビ",               color:"#FF6D00" },
+  { handle:"gamegetnavi",     label:"ゲームゲットナビ",   color:"#1565C0" },
+  { handle:"omusubicororiin", label:"おむすびころりん",   color:"#8E24AA" },
+  { handle:"pokecayoyaku",    label:"ポケカ予約",         color:"#00897B" },
+  { handle:"NinjaMaruTCG",    label:"忍丸TCG",            color:"#43A047" },
+  { handle:"sedokoX",         label:"セドコ",             color:"#C0CA33" },
+];
+const STATUS_OPTIONS = [
+  { id:"none",    label:"未対応",   color:"#9E9E9E", bg:"rgba(158,158,158,0.15)" },
+  { id:"applied", label:"応募済み", color:"#42A5F5", bg:"rgba(66,165,245,0.15)" },
+  { id:"won",     label:"当選🎉",  color:"#66BB6A", bg:"rgba(102,187,106,0.15)" },
+  { id:"lost",    label:"落選",    color:"#EF5350", bg:"rgba(239,83,80,0.15)" },
+  { id:"skip",    label:"見送り",  color:"#777",    bg:"rgba(120,120,120,0.12)" },
+];
+const STORE_KEYWORDS = ["セブンネット","セブンイレブン","ローソン","ファミリーマート","ファミマ","ヨドバシ","ビックカメラ","晴れる屋","ポケモンセンター","ポケセン","カードラウンジ","Amazon","アマゾン","楽天","イオン","TSUTAYA","ゲオ","駿河屋","忍丸","あみあみ","メロンブックス","とらのあな"];
+const SHOP_VISIT_WORDS = ["店頭","店舗","来店","ご来店","並び","並ぶ","先着","開店","入店","抽選券","応募券","配布"];
+const APPLY_STRONG = ["応募","抽選","エントリー","受付","申し込","申込","予約","販売","購入","受け取り","当選","当落","先着"];
+const NOISE_WORDS = ["落選しました","当たりませんでした","ハズレ","残念","転売","相場","価格","買取","開封","自慢","届いた","届きました","レビュー","感想","お礼","ありがとう","おはよう","こんばんは","雑談"];
+ function ballSVG(kind, size){
+  const tops={monster:"#EE1515",super:"#3B82C4",hyper:"#F5C518",master:"#7B2D8E"};
+  const top=tops[kind]||"#EE1515";
+  const masterDeco = kind==="master" ? '<circle cx="30" cy="22" r="9" fill="#E03177"/><circle cx="62" cy="22" r="9" fill="#E03177"/><text x="50" y="33" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle" font-family="sans-serif">M</text>' : "";
+  const superDeco = kind==="super" ? '<path d="M30 10 L50 30 L70 10 Z M22 22 L40 40 L30 50 L12 32 Z M78 22 L60 40 L70 50 L88 32 Z" fill="#E03131"/>' : "";
+  const hyperDeco = kind==="hyper" ? '<path d="M50 6 L62 26 L50 30 L38 26 Z M20 14 L34 30 L24 38 L10 24 Z M80 14 L66 30 L76 38 L90 24 Z" fill="#111"/>' : "";
+  const btnFill = kind==="master" ? "#E0B0FF" : "#fff";
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="'+size+'" height="'+size+'">'
+    + '<defs><radialGradient id="hl'+kind+'" cx="35%" cy="30%" r="70%"><stop offset="0%" stop-color="#fff" stop-opacity="0.55"/><stop offset="40%" stop-color="#fff" stop-opacity="0"/></radialGradient>'
+    + '<clipPath id="cp'+kind+'"><circle cx="50" cy="50" r="46"/></clipPath></defs>'
+    + '<g clip-path="url(#cp'+kind+')"><rect x="0" y="0" width="100" height="50" fill="'+top+'"/><rect x="0" y="50" width="100" height="50" fill="#F5F5F5"/>'+superDeco+hyperDeco+masterDeco+'<rect x="0" y="45" width="100" height="10" fill="#111"/></g>'
+    + '<circle cx="50" cy="50" r="46" fill="none" stroke="#111" stroke-width="4"/>'
+    + '<circle cx="50" cy="50" r="14" fill="'+btnFill+'" stroke="#111" stroke-width="5"/>'
+    + '<circle cx="50" cy="50" r="6" fill="'+btnFill+'" stroke="#999" stroke-width="1.5"/>'
+    + '<circle cx="50" cy="50" r="46" fill="url(#hl'+kind+')"/></svg>';
+}
+const BALLS = [
+  { kind:"monster", name:"モンスターボール", weight:60 },
+  { kind:"super",   name:"スーパーボール",   weight:26 },
+  { kind:"hyper",   name:"ハイパーボール",   weight:10 },
+  { kind:"master",  name:"マスターボール",   weight:4, master:true },
+];
+function rollBall(){ const t=BALLS.reduce((s,b)=>s+b.weight,0); let r=Math.random()*t; for(const b of BALLS){ if(r<b.weight) return b; r-=b.weight; } return BALLS[0]; }
+function playBall(){
+  const b=rollBall();
+  const ov=document.getElementById("ballOverlay"), inner=document.getElementById("ballInner");
+  ov.style.background = b.master ? "rgba(80,30,120,0.45)" : "rgba(0,0,0,0.35)";
+  let sparks="";
+  if(b.master){ for(let i=0;i<12;i++){ sparks+='<div style="position:absolute;font-size:24px;left:'+(10+Math.random()*80)+'%;top:'+(10+Math.random()*80)+'%;animation:sparkle 0.8s '+(Math.random()*0.5)+'s infinite">✨</div>'; } }
+  inner.innerHTML = sparks
+    + '<div style="text-align:center;animation:ballPop 0.6s ease-out'+(b.master?', shake 0.4s 0.6s 3':'')+'">'
+    + ballSVG(b.kind, b.master?110:90)
+    + '<div style="margin-top:14px;color:#fff;font-weight:800;font-size:'+(b.master?22:16)+'px;text-shadow:0 2px 8px rgba(0,0,0,0.5)">'+(b.master?"✨ マスターボール！ ✨":b.name)+'</div>'
+    + (b.master?'<div style="margin-top:6px;color:#FFD54F;font-weight:700;font-size:14px">大当たりの予感…!?</div>':'')
+    + '</div>';
+  ov.classList.add("show");
+  setTimeout(()=>{ ov.classList.remove("show"); }, b.master?2200:1100);
+}
+function initBgBalls(){
+  const el=document.getElementById("bgBalls");
+  const spots=[{t:"8%",r:"-50px",s:180,o:0.05,rot:15},{b:"10%",l:"-60px",s:220,o:0.045,rot:-12},{t:"44%",l:"55%",s:130,o:0.04,rot:0}];
+  el.innerHTML = spots.map(p=>{
+    let pos="";
+    if(p.t!==undefined) pos+="top:"+p.t+";"; if(p.b!==undefined) pos+="bottom:"+p.b+";";
+    if(p.l!==undefined) pos+="left:"+p.l+";"; if(p.r!==undefined) pos+="right:"+p.r+";";
+    return '<div class="b" style="'+pos+'opacity:'+p.o+';transform:rotate('+p.rot+'deg)">'+ballSVG("monster",p.s)+'</div>';
+  }).join("");
+}
+let DATA=null, STATUSES={}, MEMOS={}, EXCLUDED={}, currentTab="net";
+try { STATUSES = JSON.parse(localStorage.getItem("pokeka_statuses")||"{}"); } catch(e){}
+try { MEMOS = JSON.parse(localStorage.getItem("pokeka_memos")||"{}"); } catch(e){}
+try { EXCLUDED = JSON.parse(localStorage.getItem("pokeka_excluded")||"{}"); } catch(e){}
+function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+function acctOf(h){ return ACCOUNTS.find(a=>a.handle===h); }
+function esc(s){ return String(s||"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function extractUrl(text){ const m=String(text||"").match(/https?:\/\/[^\s　]+/g); if(!m) return null; return m.find(u=>!/x\.com|twitter|nitter/.test(u))||m[0]; }
+function extractStore(text){ for(const k of STORE_KEYWORDS){ if(text.includes(k)) return k; } return null; }
+function extractSummary(text){ const c=String(text||"").replace(/https?:\/\/[^\s　]+/g,"").replace(/#\S+/g,"").trim(); return c.split("\n").map(l=>l.trim()).filter(l=>l).slice(0,2).join(" / "); }
+function isShopVisit(text){ return SHOP_VISIT_WORDS.some(w=>String(text||"").includes(w)); }
+function applyScore(text){ const t=String(text||""); let s=0; APPLY_STRONG.forEach(w=>{if(t.includes(w))s+=2;}); if(extractUrl(t))s+=2; if(/(\d{1,2})月(\d{1,2})日|(\d{1,2})\/(\d{1,2})/.test(t))s+=1; NOISE_WORDS.forEach(w=>{if(t.includes(w))s-=3;}); return s; }
+function isLikelyApply(text){ return applyScore(text)>=2; }
+function deadlineInfo(text){ const t=String(text||""); let m=t.match(/(\d{1,2})月(\d{1,2})日/)||t.match(/(\d{1,2})\/(\d{1,2})/); if(!m) return null; const month=+m[1],day=+m[2]; if(month<1||month>12||day<1||day>31) return null; const now=new Date(); now.setHours(0,0,0,0); let tg=new Date(now.getFullYear(),month-1,day); tg.setHours(0,0,0,0); if(tg<now&&(now-tg)>1000*60*60*24*180) tg=new Date(now.getFullYear()+1,month-1,day); return { month,day,days:Math.round((tg-now)/86400000) }; }
+function deadlineTag(info){ if(!info) return {color:"rgba(255,255,255,0.42)",bg:"rgba(255,255,255,0.06)",label:"期限不明"}; if(info.days<0) return {color:"#888",bg:"rgba(120,120,120,0.15)",label:"終了 "+info.month+"/"+info.day}; if(info.days===0) return {color:"#fff",bg:"#B71C1C",label:"本日締切 "+info.month+"/"+info.day}; if(info.days<=3) return {color:"#fff",bg:"#E65100",label:"あと"+info.days+"日 "+info.month+"/"+info.day}; return {color:"#FFD54F",bg:"rgba(255,213,79,0.15)",label:info.month+"/"+info.day+"まで（あと"+info.days+"日）"}; }
+function groupByUrl(tweets){ const g=new Map(),s=[]; for(const t of tweets){ const url=extractUrl(t.text); if(url){ const k=url.replace(/[?#].*$/,""); if(!g.has(k)) g.set(k,{id:t.id,url,accounts:new Set([t.account]),text:t.text,links:[t.link]}); else { const x=g.get(k); x.accounts.add(t.account); x.links.push(t.link); if((t.text||"").length>(x.text||"").length) x.text=t.text; } } else s.push({id:t.id,url:null,accounts:new Set([t.account]),text:t.text,links:[t.link]}); } return [...g.values(),...s]; }
+function accNames(set){ return [...set].map(h=>{const a=acctOf(h); return a?a.label:h;}).join("・"); }
+function accDots(set){ return [...set].map(h=>{const a=acctOf(h); return '<span class="dot" style="background:'+(a?a.color:"#888")+'"></span>';}).join(""); }
+async function loadData(){
+  const btn=document.getElementById("refreshBtn"); btn.disabled=true; btn.textContent="⏳";
+  document.getElementById("error").classList.add("hidden");
+  try{
+    const res=await fetch(DATA_URL+"?t="+Date.now());
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    DATA=await res.json();
+    document.getElementById("subtitle").textContent = DATA.updated ? "最終更新: "+new Date(DATA.updated).toLocaleString("ja-JP") : "";
+    const sel=document.getElementById("acctFilter");
+    if(sel.options.length<=1) ACCOUNTS.forEach(a=>{const o=document.createElement("option"); o.value=a.handle; o.textContent=a.label; sel.appendChild(o);});
+  }catch(e){ const err=document.getElementById("error"); err.textContent="データを読み込めませんでした（"+e.message+"）。少し待って更新してください。"; err.classList.remove("hidden"); }
+  btn.disabled=false; btn.textContent="🔄 更新"; render();
+}
+function switchTab(tab){
+  currentTab=tab;
+  document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active", b.dataset.tab===tab));
+  const cardTabs=["net","shop","done","excl"];
+  document.getElementById("view-cards").classList.toggle("hidden", !cardTabs.includes(tab));
+  document.getElementById("view-all").classList.toggle("hidden", tab!=="all");
+  document.getElementById("view-stats").classList.toggle("hidden", tab!=="stats");
+  document.getElementById("searchBox").classList.toggle("hidden", !cardTabs.includes(tab));
+  document.getElementById("banner").classList.toggle("hidden", !cardTabs.includes(tab));
+  render();
+}
+function setStatus(id,val){ STATUSES[id]=val; save("pokeka_statuses",STATUSES); render(); }
+function setMemo(id,val){ MEMOS[id]=val; save("pokeka_memos",MEMOS); }
+function askExclude(id){ window.__confirmId=id; render(); }
+function cancelExclude(){ window.__confirmId=null; render(); }
+function exclude(id){ EXCLUDED[id]=true; save("pokeka_excluded",EXCLUDED); window.__confirmId=null; render(); }
+function restore(id){ delete EXCLUDED[id]; save("pokeka_excluded",EXCLUDED); render(); }
+function applyAndOpen(id,url){ STATUSES[id]="applied"; save("pokeka_statuses",STATUSES); playBall(); window.open(url,"_blank","noopener"); render(); }
+window.setStatus=setStatus; window.setMemo=setMemo; window.askExclude=askExclude; window.cancelExclude=cancelExclude; window.exclude=exclude; window.restore=restore; window.applyAndOpen=applyAndOpen;
+ function cardHtml(g, info, shop, opts){
+  const st=STATUSES[g.id]||"none";
+  const stObj=STATUS_OPTIONS.find(o=>o.id===st)||STATUS_OPTIONS[0];
+  const safeId=esc(g.id).replace(/'/g,"\\'");
+  const store=extractStore(g.text), summary=extractSummary(g.text), dl=deadlineTag(info);
+  const xLink=g.links[0]||"#";
+  const memo=esc(MEMOS[g.id]||"");
+  let rightBtns="";
+  if(opts.excluded){
+    rightBtns='<button class="restore-btn" onclick="restore(\''+safeId+'\')">↩ 戻す</button>';
+  } else {
+    const exBtn='<button class="ex-btn" onclick="askExclude(\''+safeId+'\')">🚫</button>';
+    const lineBtn='<button class="line-btn" onclick="shareLine(\''+safeId+'\')">LINE</button>';
+    const xBtn='<a class="x-btn" href="'+esc(xLink)+'" target="_blank" rel="noreferrer">🔗 X</a>';
+    let applyBtn;
+    if(shop){ applyBtn = g.url ? '<a class="apply-btn apply-shop" href="'+esc(g.url)+'" target="_blank" rel="noreferrer" onclick="setStatus(\''+safeId+'\',\'applied\')">🏬 店舗情報を見る</a>' : '<span class="apply-shop-none">🏬 店頭での応募</span>'; }
+    else { applyBtn = g.url ? '<button class="apply-btn apply-net" onclick="applyAndOpen(\''+safeId+'\',\''+esc(g.url).replace(/'/g,"\\'")+'\')">🎯 応募ページを開く</button>' : '<span class="apply-none">URLなし（Xで確認）</span>'; }
+    rightBtns = exBtn + lineBtn + xBtn + applyBtn;
+  }
+  let confirmBox="";
+  if(window.__confirmId===g.id){
+    confirmBox='<div class="confirm-box"><div style="color:#EF9A9A;font-size:12px;margin-bottom:8px">この投稿を「除外済み」に移動しますか？（あとで戻せます）</div>'
+      +'<div style="display:flex;gap:8px"><button onclick="cancelExclude()" style="flex:1;font-size:12px;color:rgba(255,255,255,0.42);background:rgba(255,255,255,0.07);border:none;border-radius:8px;padding:8px;font-family:inherit">キャンセル</button>'
+      +'<button onclick="exclude(\''+safeId+'\')" style="flex:1;font-size:12px;font-weight:700;color:#fff;background:#EF5350;border:none;border-radius:8px;padding:8px;font-family:inherit">移動する</button></div></div>';
+  }
+  return '<div class="card" style="opacity:'+(opts.dim?0.5:1)+'">'
+    + '<div class="dl-row"><span class="dl-tag" style="color:'+dl.color+';background:'+dl.bg+'">📅 '+dl.label+'</span>'
+    + '<select class="status-pill" style="background:'+stObj.bg+';color:'+stObj.color+'" onchange="setStatus(\''+safeId+'\', this.value)">'
+    + STATUS_OPTIONS.map(o=>'<option value="'+o.id+'"'+(o.id===st?' selected':'')+'>'+o.label+'</option>').join("")+'</select></div>'
     + '<div class="field"><span class="field-label">🏪 店名</span><span class="field-store">'+(store?esc(store):"（記載なし）")+'</span></div>'
     + '<div class="field"><span class="field-label">📝 内容</span><span class="field-text">'+esc(summary)+'</span></div>'
     + '<div class="field"><span class="field-label">📡 元</span><span class="field-src">'+accDots(g.accounts)+esc(accNames(g.accounts))+(g.accounts.size>1?' <span class="merge-tag">'+g.accounts.size+'件統合</span>':'')+'</span></div>'
@@ -102,8 +268,6 @@
     + confirmBox
     + '</div>';
 }
-
-// LINE共有
 function shareLine(id){
   const tweets=(DATA&&DATA.tweets)||[];
   const relevant = tweets.filter(t => t.relevant || isLikelyApply(t.text));
@@ -119,7 +283,6 @@ function shareLine(id){
   window.open("https://line.me/R/share?text="+encodeURIComponent(msg),"_blank","noopener");
 }
 window.shareLine=shareLine;
-
 function render(){
   const tweets=(DATA&&DATA.tweets)||[];
   const cardTabs=["net","shop","done","excl"];
@@ -174,17 +337,7 @@ function renderBanner(list){
   el.innerHTML='<div class="banner"><div class="banner-title">🚨 まもなく締切（今日・明日）</div>'
     +urgent.slice(0,5).map(x=>{ const store=extractStore(x.g.text)||extractSummary(x.g.text).slice(0,20); return '<div class="banner-item">・'+(x.info.days===0?"本日":"明日")+' '+x.info.month+'/'+x.info.day+'｜'+esc(store)+'</div>'; }).join("")+'</div>';
 }
-
-// スワイプ
 (function(){
   let sx=0,sy=0,tr=false; const area=document.getElementById("swipeArea");
   area.addEventListener("touchstart",e=>{ if(e.touches.length!==1) return; sx=e.touches[0].clientX; sy=e.touches[0].clientY; tr=true; },{passive:true});
-  area.addEventListener("touchend",e=>{ if(!tr) return; tr=false; const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy; if(Math.abs(dx)<60||Math.abs(dx)<Math.abs(dy)*1.5) return; const i=TAB_ORDER.indexOf(currentTab); if(dx<0&&i<TAB_ORDER.length-1) switchTab(TAB_ORDER[i+1]); else if(dx>0&&i>0) switchTab(TAB_ORDER[i-1]); },{passive:true});
-})();
-
-window.__confirmId=null;
-initBgBalls();
-loadData();
-</script>
-</body>
-</html>
+  area.addEventListener("touchend",e=>{ if(!tr) return; tr=false; const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy; if(
