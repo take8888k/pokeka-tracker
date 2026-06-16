@@ -5,7 +5,7 @@ from xml.etree import ElementTree as ET
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 
-ACCOUNTS = ["pokecachan", "Zabi_pokeka", "gamegetnavi"]
+ACCOUNTS = ["pokecachan", "Zabi_pokeka", "gamegetnavi", "omusubicororiin", "pokecayoyaku", "NinjaMaruTCG", "sedokoX"]
 NITTER_INSTANCES = [
     "https://nitter.net",
     "https://nitter.privacydev.net",
