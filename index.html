@@ -32,7 +32,7 @@
   .status-pill { border:none; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; font-family:inherit; }
   .field { display:flex; gap:8px; margin-bottom:6px; }
   .field-label { color:rgba(255,255,255,0.42); font-size:11px; min-width:36px; flex-shrink:0; }
-  .field-store { color:#e8e8f0; font-size:14px; font-weight:700; }
+  .field-store { color:#e8e8f0; font-size:14px; font-weight:700; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
   .field-text { color:#e8e8f0; font-size:13px; line-height:1.5; word-break:break-word; }
   .field-src { color:rgba(255,255,255,0.42); font-size:12px; display:flex; align-items:center; gap:5px; flex-wrap:wrap; }
   .dot { width:7px; height:7px; border-radius:50%; display:inline-block; }
@@ -182,10 +182,11 @@ function initBgBalls(){
     return '<div class="b" style="'+pos+'opacity:'+p.o+';transform:rotate('+p.rot+'deg)">'+ballSVG("monster",p.s)+'</div>';
   }).join("");
 }
-let DATA=null, STATUSES={}, MEMOS={}, EXCLUDED={}, currentTab="net";
+let DATA=null, STATUSES={}, MEMOS={}, EXCLUDED={}, KIND={}, currentTab="net";
 try { STATUSES = JSON.parse(localStorage.getItem("pokeka_statuses")||"{}"); } catch(e){}
 try { MEMOS = JSON.parse(localStorage.getItem("pokeka_memos")||"{}"); } catch(e){}
 try { EXCLUDED = JSON.parse(localStorage.getItem("pokeka_excluded")||"{}"); } catch(e){}
+try { KIND = JSON.parse(localStorage.getItem("pokeka_kind")||"{}"); } catch(e){}
 function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
 function acctOf(h){ return ACCOUNTS.find(a=>a.handle===h); }
 function esc(s){ return String(s||"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
@@ -193,6 +194,9 @@ function extractUrl(text){ const m=String(text||"").match(/https?:\/\/[^\s　]+/
 function extractStore(text){ for(const k of STORE_KEYWORDS){ if(text.includes(k)) return k; } return null; }
 function extractSummary(text){ const c=String(text||"").replace(/https?:\/\/[^\s　]+/g,"").replace(/#\S+/g,"").trim(); return c.split("\n").map(l=>l.trim()).filter(l=>l).slice(0,2).join(" / "); }
 function isShopVisit(text){ return SHOP_VISIT_WORDS.some(w=>String(text||"").includes(w)); }
+function resolveShop(g){ if(KIND[g.id]==="shop") return true; if(KIND[g.id]==="net") return false; return isShopVisit(g.text); }
+function setKind(id,kind){ KIND[id]=kind; save("pokeka_kind",KIND); render(); }
+window.setKind=setKind;
 function applyScore(text){ const t=String(text||""); let s=0; APPLY_STRONG.forEach(w=>{if(t.includes(w))s+=2;}); if(extractUrl(t))s+=2; if(/(\d{1,2})月(\d{1,2})日|(\d{1,2})\/(\d{1,2})/.test(t))s+=1; NOISE_WORDS.forEach(w=>{if(t.includes(w))s-=3;}); return s; }
 function isLikelyApply(text){ return applyScore(text)>=2; }
 function deadlineInfo(text){ const t=String(text||""); let m=t.match(/(\d{1,2})月(\d{1,2})日/)||t.match(/(\d{1,2})\/(\d{1,2})/); if(!m) return null; const month=+m[1],day=+m[2]; if(month<1||month>12||day<1||day>31) return null; const now=new Date(); now.setHours(0,0,0,0); let tg=new Date(now.getFullYear(),month-1,day); tg.setHours(0,0,0,0); if(tg<now&&(now-tg)>1000*60*60*24*180) tg=new Date(now.getFullYear()+1,month-1,day); return { month,day,days:Math.round((tg-now)/86400000) }; }
@@ -257,11 +261,17 @@ function cardHtml(g, info, shop, opts){
       +'<div style="display:flex;gap:8px"><button onclick="cancelExclude()" style="flex:1;font-size:12px;color:rgba(255,255,255,0.42);background:rgba(255,255,255,0.07);border:none;border-radius:8px;padding:8px;font-family:inherit">キャンセル</button>'
       +'<button onclick="exclude(\''+safeId+'\')" style="flex:1;font-size:12px;font-weight:700;color:#fff;background:#EF5350;border:none;border-radius:8px;padding:8px;font-family:inherit">移動する</button></div></div>';
   }
+  let switchKind="";
+  if(!opts.excluded){
+    switchKind = shop
+      ? ' <button onclick="setKind(\''+safeId+'\',\'net\')" style="font-size:11px;color:#90CAF9;background:rgba(144,202,249,0.12);border:none;border-radius:6px;padding:2px 7px;font-family:inherit;cursor:pointer">🌐 ネットへ</button>'
+      : ' <button onclick="setKind(\''+safeId+'\',\'shop\')" style="font-size:11px;color:#A5D6A7;background:rgba(67,160,71,0.15);border:none;border-radius:6px;padding:2px 7px;font-family:inherit;cursor:pointer">🏬 店舗へ</button>';
+  }
   return '<div class="card" style="opacity:'+(opts.dim?0.5:1)+'">'
     + '<div class="dl-row"><span class="dl-tag" style="color:'+dl.color+';background:'+dl.bg+'">📅 '+dl.label+'</span>'
     + '<select class="status-pill" style="background:'+stObj.bg+';color:'+stObj.color+'" onchange="setStatus(\''+safeId+'\', this.value)">'
     + STATUS_OPTIONS.map(o=>'<option value="'+o.id+'"'+(o.id===st?' selected':'')+'>'+o.label+'</option>').join("")+'</select></div>'
-    + '<div class="field"><span class="field-label">🏪 店名</span><span class="field-store">'+(store?esc(store):"（記載なし）")+'</span></div>'
+    + '<div class="field"><span class="field-label">🏪 店名</span><span class="field-store">'+(store?esc(store):"（記載なし）")+switchKind+'</span></div>'
     + '<div class="field"><span class="field-label">📝 内容</span><span class="field-text">'+esc(summary)+'</span></div>'
     + '<div class="field"><span class="field-label">📡 元</span><span class="field-src">'+accDots(g.accounts)+esc(accNames(g.accounts))+(g.accounts.size>1?' <span class="merge-tag">'+g.accounts.size+'件統合</span>':'')+'</span></div>'
     + '<textarea class="memo" rows="1" placeholder="📝 メモ（ID登録済み 等）" oninput="setMemo(\''+safeId+'\', this.value)">'+memo+'</textarea>'
@@ -294,11 +304,11 @@ function render(){
     if(currentTab==="excl"){
       let ex=groups.filter(g=>EXCLUDED[g.id]); if(kw) ex=ex.filter(g=>(g.text||"").toLowerCase().includes(kw));
       document.getElementById("banner").innerHTML="";
-      document.getElementById("cardList").innerHTML = ex.length?ex.map(g=>cardHtml(g,deadlineInfo(g.text),isShopVisit(g.text),{excluded:true,dim:true})).join(""):'<div class="empty"><div class="empty-icon">🚫</div><div>除外したものはありません</div></div>';
+      document.getElementById("cardList").innerHTML = ex.length?ex.map(g=>cardHtml(g,deadlineInfo(g.text),resolveShop(g),{excluded:true,dim:true})).join(""):'<div class="empty"><div class="empty-icon">🚫</div><div>除外したものはありません</div></div>';
       return;
     }
     groups=groups.filter(g=>!EXCLUDED[g.id]);
-    let enriched=groups.map(g=>({g,info:deadlineInfo(g.text),shop:isShopVisit(g.text),done:["applied","won","lost","skip"].includes(STATUSES[g.id])}));
+    let enriched=groups.map(g=>({g,info:deadlineInfo(g.text),shop:resolveShop(g),done:["applied","won","lost","skip"].includes(STATUSES[g.id])}));
     if(kw) enriched=enriched.filter(x=>(x.g.text||"").toLowerCase().includes(kw));
     if(currentTab==="done"){
       const done=enriched.filter(x=>x.done);
