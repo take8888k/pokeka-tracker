@@ -1,7 +1,591 @@
 {
-  "updated": "2026-07-20T00:00:46.454384+00:00",
-  "lastAttempt": "2026-07-20T00:00:46.454397+00:00",
+  "updated": "2026-07-20T23:59:16.297453+00:00",
+  "lastAttempt": "2026-07-20T23:59:16.297468+00:00",
   "tweets": [
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079349957405048884#m",
+      "account": "omusubicororiin",
+      "text": "ワンピースカード『決戦の刻』 再販 抽選情報✨ 今日締切🚨 ✅カードスタジアム小禄店 受付中💡 ✅キデイランド ✅ふるいち ✅三洋堂 ✅イエローサブマリン 一部店舗 📲店舗詳細と応募方法⏬ http://mikeco-room.com/kessennotoki-r… 今日は12時頃に当選発表もあります🎯 ✅ヤマダ電機 無事に当選してます様に!",
+      "link": "https://x.com/omusubicororiin/status/2079349957405048884#m",
+      "pubDate": "Mon, 20 Jul 2026 23:37:16 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079331974402146313#m",
+      "account": "omusubicororiin",
+      "text": "『スタートデッキ100 』再販 抽選情報✨ 今日締切店多数あり🚨 ✅ビックカメラ ・新横浜 ・池袋本店 ・池袋西口 ・池袋IT tower ・AKIBA ※店舗によってはニンジャスピナー/アビスアイ/インフェルノXも💡 ✅竜星のPAO ✅カードボックス 一部店舗 📲店舗詳細と応募方法⏬ http://mikeco-room.com/startdeck100-r…",
+      "link": "https://x.com/omusubicororiin/status/2079331974402146313#m",
+      "pubDate": "Mon, 20 Jul 2026 22:25:49 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079322278928769381#m",
+      "account": "omusubicororiin",
+      "text": "ポケカ『ストームエメラルダ・スターターセットex 』抽選予約情報✨ 今日締切⚠️ ✅ポケモンカードラウンジ ✅トレカプラザ55通販 抽選開始🚨 ✅晴れる屋2 各店 ✅ヤマシロヤ 受付中💡 ✅竜のしっぽ ✅ホビビ通販 など複数店あり! 📲抽選店の応募と詳細⏬ http://mikeco-room.com/stormemeralda-… 今応募できる店舗も一気にチェック👆",
+      "link": "https://x.com/omusubicororiin/status/2079322278928769381#m",
+      "pubDate": "Mon, 20 Jul 2026 21:47:17 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079310944124215718#m",
+      "account": "omusubicororiin",
+      "text": "おはようございます☀ 昨日はストームエメラルダやスタデの抽選開始店多かったですね😊 今日も随時お知らせしていくので、お仕事の合間などにぜひチェックして下さい☺️ 今日からお仕事始めの方も、お休みの方も良い1日になります様に✨",
+      "link": "https://x.com/omusubicororiin/status/2079310944124215718#m",
+      "pubDate": "Mon, 20 Jul 2026 21:02:15 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079236074547921318#m",
+      "account": "NinjaMaruTCG",
+      "text": "イタズラ防止のために キャンセル手数料とれば良いと思う☺️ メルカリさんチャンスですよ🤩",
+      "link": "https://x.com/NinjaMaruTCG/status/2079236074547921318#m",
+      "pubDate": "Mon, 20 Jul 2026 16:04:45 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079232393890934896#m",
+      "account": "gamegetnavi",
+      "text": "R to @gamegetnavi: Amazonの場合、在庫は順次補充されますので、欲しい方は👆のウォッチを👀",
+      "link": "https://x.com/gamegetnavi/status/2079232393890934896#m",
+      "pubDate": "Mon, 20 Jul 2026 15:50:07 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079232079695687779#m",
+      "account": "gamegetnavi",
+      "text": "『Vジャンプ 2026年10月号』予約受付を再び在庫追加で開始✨",
+      "link": "https://x.com/gamegetnavi/status/2079232079695687779#m",
+      "pubDate": "Mon, 20 Jul 2026 15:48:52 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079225917273215256#m",
+      "account": "gamegetnavi",
+      "text": "『Vジャンプ 2026年10月号』予約受付を開始✨ 📅2026年8月21日発売 ワンピースカード応募者全員大サービスの影響で争奪戦に🏃 楽天ブックス⏩https://a.r10.to/hPDubW ✅応募者全員大サービス 🔖麦わらの一味3人の最強セットカード 　・モンキー・D・ルフィ：P-110 　・ロロノア・ゾロ：OP16-053 　・サンジ：OP09-105 #遊戯王 #DBFW #ワンピカー",
+      "link": "https://x.com/gamegetnavi/status/2079225917273215256#m",
+      "pubDate": "Mon, 20 Jul 2026 15:24:23 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079225698947125727#m",
+      "account": "gamegetnavi",
+      "text": "『Vジャンプ 2026年10月号』予約受付を開始✨ 📅2026年8月21日発売 ワンピースカード応募者全員大サービスの影響で争奪戦に🏃 アニメイト⏩https://gamenv.net/tc/stores/comment-page-677/#comment-333849 ✅応募者全員大サービス 🔖麦わらの一味3人の最強セットカード 　・モンキー・D・ルフィ：P-110 　・ロロノア・ゾロ：OP16",
+      "link": "https://x.com/gamegetnavi/status/2079225698947125727#m",
+      "pubDate": "Mon, 20 Jul 2026 15:23:31 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079224059557294096#m",
+      "account": "gamegetnavi",
+      "text": "『Vジャンプ 2026年10月特大号』予約受付を開始✨ 📅2026年8月21日発売 ワンピースカード応募者全員大サービスの影響で争奪戦に🏃 タワーレコード⏩https://gamenv.net/tc/stores/comment-page-677/#comment-333848 ✅応募者全員大サービス 🔖麦わらの一味3人の最強セットカード 　・モンキー・D・ルフィ：P-110 　・ロロノア・ゾロ：",
+      "link": "https://x.com/gamegetnavi/status/2079224059557294096#m",
+      "pubDate": "Mon, 20 Jul 2026 15:17:00 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079222152893776045#m",
+      "account": "NinjaMaruTCG",
+      "text": "たった数日でジャンプの件 判断している人いるけど そんな簡単に上がり続けるなら 誰でも儲かってますよ☺️ 大切なのはどこまで我慢して 保有出来るかです。 そんな簡単に見切りつける情報こそ 鵜呑みにしないほうが良いと思います😎 ジャンプ×ポケモンも 誰も見向きもしない時期ありましたから🤣 そういう時期があるからこそ 今があるんです☺️",
+      "link": "https://x.com/NinjaMaruTCG/status/2079222152893776045#m",
+      "pubDate": "Mon, 20 Jul 2026 15:09:25 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079221464700793214#m",
+      "account": "gamegetnavi",
+      "text": "『Vジャンプ 2026年10月特大号』予約受付を開始✨ 📅2026年8月21日発売 ワンピースカード応募者全員大サービスの影響で争奪戦に🏃 Amazon公式⏩https://amzn.to/4wW5UVV ✅応募者全員大サービス 🔖麦わらの一味3人の最強セットカード 　・モンキー・D・ルフィ：P-110 　・ロロノア・ゾロ：OP16-053 　・サンジ：OP09-105 #AD #遊戯王 #DBF",
+      "link": "https://x.com/gamegetnavi/status/2079221464700793214#m",
+      "pubDate": "Mon, 20 Jul 2026 15:06:41 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079216999159509436#m",
+      "account": "NinjaMaruTCG",
+      "text": "200万円🤣",
+      "link": "https://x.com/NinjaMaruTCG/status/2079216999159509436#m",
+      "pubDate": "Mon, 20 Jul 2026 14:48:57 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079206864362058210#m",
+      "account": "gamegetnavi",
+      "text": "ブロリーが目立ち過ぎてません？😆 親子三大かめはめ波",
+      "link": "https://x.com/gamegetnavi/status/2079206864362058210#m",
+      "pubDate": "Mon, 20 Jul 2026 14:08:40 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079194861115429238#m",
+      "account": "gamegetnavi",
+      "text": "ヤマシロヤ・ポケカ抽選受付を開始✨ ✅ストームエメラルダ ✅スターターセットex 3セット 　🔖イーブイex 　🔖ゾロア＆ゾロアークex 　🔖ニャオハ＆マスカーニャex 📅受付期間 7月22日(水)21:30まで 🎯当選発表 7月27日（月） 💰入金期限 7月31日(金)13:00まで 📲抽選URL https://docs.google.com/forms/d/e/1FAIpQLSf6Y52-X",
+      "link": "https://x.com/gamegetnavi/status/2079194861115429238#m",
+      "pubDate": "Mon, 20 Jul 2026 13:20:59 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/sedokoX/status/2079194356431630791#m",
+      "account": "sedokoX",
+      "text": "R to @sedokoX: CASIO G-SHOCK ポケモン Pokemon GA-110PKM-7AJR 🔻Amazon《PR》 https://www.amazon.co.jp/dp/B0H61Z9LVY?aod=1&m=AN1VRQENFRJN5&tag=otokuzyohokyoku-22 🔻Yahooショッピング《PR》 https://yahoo.jp/qx5e7w?openEx",
+      "link": "https://x.com/sedokoX/status/2079194356431630791#m",
+      "pubDate": "Mon, 20 Jul 2026 13:18:58 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/sedokoX/status/2079194352153505865#m",
+      "account": "sedokoX",
+      "text": "3万が7万円に高騰中😱💸 CASIO ×ポケモン30周年コラボにweb抽選🎯 【抽選販売】 G-SHOCK Pokemon GA-110PKM-7AJR ✅価格：33,000円‼️ ➡️相場：約70,000円 📅応募期間 〆7月20日(月)23:59まで 📍購入場所 The Stand FOOL SO GOOD(東京) ※転売行為はお控えください 👇応募ページはリプ欄へ👇",
+      "link": "https://x.com/sedokoX/status/2079194352153505865#m",
+      "pubDate": "Mon, 20 Jul 2026 13:18:57 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079191230672674890#m",
+      "account": "gamegetnavi",
+      "text": "ドラゴンボールスーパーダイバーズ プロモカード付「単行本」📙 最新刊の「レッツ! スーパーダイブ!! 3」 (ジャンプコミックス) あみあみ にて予約受付開始✨ 欲しい人は急いで🏃 あみあみ⏩ https://a.r10.to/hg0MxU #ドラゴンボール #DBSD #AD",
+      "link": "https://x.com/gamegetnavi/status/2079191230672674890#m",
+      "pubDate": "Mon, 20 Jul 2026 13:06:33 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/Zabi_pokeka/status/2079189968803745909#m",
+      "account": "Zabi_pokeka",
+      "text": "すみません本日時間無くてトレカニュース作成できないのでお休みします🙇‍♂️🙇‍♂️🙇‍♂️🙇‍♂️🙇‍♂️",
+      "link": "https://x.com/Zabi_pokeka/status/2079189968803745909#m",
+      "pubDate": "Mon, 20 Jul 2026 13:01:32 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079182931462083066#m",
+      "account": "omusubicororiin",
+      "text": "『ストームエメラルダ』 『スターターセットex 3種』抽選予約情報✨ ✅ヤマシロヤ 抽選が開始してます🚨 📅受付期間 7/22(水)21:30まで! 🎯当選発表 7/27(月) 📲抽選店の応募と詳細⬇️ http://mikeco-room.com/stormemeralda-… 今応募できる抽選店もまとめてチェックできます🔍✨",
+      "link": "https://x.com/omusubicororiin/status/2079182931462083066#m",
+      "pubDate": "Mon, 20 Jul 2026 12:33:34 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecachan/status/2079182415705293203#m",
+      "account": "pokecachan",
+      "text": "R to @pokecachan: 抽選開始しました",
+      "link": "https://x.com/pokecachan/status/2079182415705293203#m",
+      "pubDate": "Mon, 20 Jul 2026 12:31:31 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecachan/status/2079175593615397220#m",
+      "account": "pokecachan",
+      "text": "晴れる屋2店舗で「ストームエメラルダ」「スターターセットex3種」の抽選開始 📅受付期間:7月26日(日)18:00まで https://docs.google.com/forms/d/e/1FAIpQLSeSn0cDhEV7uaPBSwJlEUMzwsahQofLYZ7qLkWaM3QeuICx7w/viewform",
+      "link": "https://x.com/pokecachan/status/2079175593615397220#m",
+      "pubDate": "Mon, 20 Jul 2026 12:04:25 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/Zabi_pokeka/status/2079173686331093337#m",
+      "account": "Zabi_pokeka",
+      "text": "本日告知or開始された抽選まとめ💁‍♂️ 7/20最新 【ストームエメラルダ】 ✅福福トレカ通販 7/29(水)23:59〆 https://pokemon.fukufukutoreka.com/lottery ✅ヤマシロヤ 7/20(月)21:30～7/22(水)21:30〆 https://docs.google.com/forms/d/e/1FAIpQLSf6Y52-X_k-OhWqSEsT",
+      "link": "https://x.com/Zabi_pokeka/status/2079173686331093337#m",
+      "pubDate": "Mon, 20 Jul 2026 11:56:50 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079169196727173242#m",
+      "account": "gamegetnavi",
+      "text": "ポケカ最新作『ストームエメラルダ』『スターターセットex』 予約・抽選受付情報📝 【抽選受付中の店舗一覧】 🏢Amazon　🏢コジマ 🏢ポケモンカードラウンジ2ndlot 🏢ガンリュウ/新星堂/WonderGoo 🏢ジョーシン　🏢キデイランド 🏢ファミマオンライン 🏢イエローサブマリン 🏢ドラゴンスター通販 🏢トレカチャンピオン 🏢MINT 🏢晴れる屋2 🏢チェルモ秋葉原 🏢ブックオフ 🏢シーガル",
+      "link": "https://x.com/gamegetnavi/status/2079169196727173242#m",
+      "pubDate": "Mon, 20 Jul 2026 11:39:00 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079168377877373131#m",
+      "account": "omusubicororiin",
+      "text": "ワンピースカード 『世界最強の戦士』予約情報✨ ✅ゲオ(GEO) 決戦の刻も抽選予約だったので今回も同じ可能性も💡 抽選の場合は事前準備をしておくのも重要です🚨 ゲオの応募方法や条件をわかりやすくまとめてみました📝 ぜひ参考に🤲✨ 📲ゲオ抽選まとめはこちら⏬ https://mikeco-room.com/geo-sekaisaikyounosenshi/",
+      "link": "https://x.com/omusubicororiin/status/2079168377877373131#m",
+      "pubDate": "Mon, 20 Jul 2026 11:35:45 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/Zabi_pokeka/status/2079168230900609139#m",
+      "account": "Zabi_pokeka",
+      "text": "晴れる屋2(店舗)で「ストームエメラルダ」「スターターセットex」の抽選開始されました🔥🔥🔥 【応募期間】 7月26日(日)18:00〆 【当選発表】 7月27日(月)晴れる屋2公式Xより当選確認用ページのURLが公開 抽選ページはこちら⬇️ https://docs.google.com/forms/u/0/d/1aa3ZAd9WcCa7_uz_lh2uBtBbsUqwzXvcst8Olnb4R",
+      "link": "https://x.com/Zabi_pokeka/status/2079168230900609139#m",
+      "pubDate": "Mon, 20 Jul 2026 11:35:09 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079156319823827380#m",
+      "account": "gamegetnavi",
+      "text": "ヨドバシ 人気ポケカ 販売情報❗ 🏢新宿東口 ✅スタートデッキ100 販売中❗ 販売速報⏩http://gamenv.net/tc/yodobashi/ #ポケカ #ポケモンカード #ヨドバシカメラ",
+      "link": "https://x.com/gamegetnavi/status/2079156319823827380#m",
+      "pubDate": "Mon, 20 Jul 2026 10:47:50 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079154909040214068#m",
+      "account": "NinjaMaruTCG",
+      "text": "R to @NinjaMaruTCG: なくなるのはっやw",
+      "link": "https://x.com/NinjaMaruTCG/status/2079154909040214068#m",
+      "pubDate": "Mon, 20 Jul 2026 10:42:13 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079153763848466767#m",
+      "account": "pokecayoyaku",
+      "text": "【ポケカ抽選情報】 ポケモンカード「拡張パック ストームエメラルダ/スターターセットex 3種」抽選結果発表日のまとめです⚡ 📅不定期 ・Amazon ・楽天ブックス 発表され次第、お知らせします！ 📅7/21 ⏰12:00～ ・ポケモンセンター(サッポロ、トウホク、トウキョーDX トウキョーベイ、ナゴヤ、フクオカ、ヒロシマ、オキナワ) ・晴れる屋2(通販) 📅7/22 ⏰12:00～ ・新星堂・",
+      "link": "https://x.com/pokecayoyaku/status/2079153763848466767#m",
+      "pubDate": "Mon, 20 Jul 2026 10:37:40 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079152427807498721#m",
+      "account": "NinjaMaruTCG",
+      "text": "Vジャンプ予約再開してるよー☺️",
+      "link": "https://x.com/NinjaMaruTCG/status/2079152427807498721#m",
+      "pubDate": "Mon, 20 Jul 2026 10:32:22 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079151919877214616#m",
+      "account": "pokecayoyaku",
+      "text": "【2026/7/20】 週明けポケモンカード抽選まとめです⚡ 👉開始 ・キデイランド ・ポケモンカードラウンジ ・トレカエース ・トレカステーション ・晴れる屋2(店舗) 👉告知 ヤマシロヤ 👉当選発表 ・しまむらパーク ・ドラゴンスター通販 👉ポケカ30th記念商品のポケセン事前準備 ①デジタル庁提供の「デジタル認証アプリ」を、本人認証に用いるスマートフォンにダウンロード。 ②ダウンロードした後",
+      "link": "https://x.com/pokecayoyaku/status/2079151919877214616#m",
+      "pubDate": "Mon, 20 Jul 2026 10:30:21 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079151126637916473#m",
+      "account": "omusubicororiin",
+      "text": "ポケカ『ストームエメラルダ・スターターセットex 』 今日の抽選予約まとめ📝 今日開始🚨 ✅トレカエース ✅ホビビ通販部 ✅キデイランド ✅ポケモンカードラウンジ ✅トレカステーション ✅福福トレカ通販 ✅ヤマシロヤ ※21:30〜 📲抽選店の応募と詳細⏬ http://mikeco-room.com/stormemeralda-… 応募忘れずに!",
+      "link": "https://x.com/omusubicororiin/status/2079151126637916473#m",
+      "pubDate": "Mon, 20 Jul 2026 10:27:12 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079151001484107967#m",
+      "account": "gamegetnavi",
+      "text": "✅スタートデッキ100 3BOX 販売中❗️ ✅インフェルノX 完売中☔️",
+      "link": "https://x.com/gamegetnavi/status/2079151001484107967#m",
+      "pubDate": "Mon, 20 Jul 2026 10:26:42 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079150658775888061#m",
+      "account": "NinjaMaruTCG",
+      "text": "これを重視しているアカウントさん とうとう凍結してましたね☺️",
+      "link": "https://x.com/NinjaMaruTCG/status/2079150658775888061#m",
+      "pubDate": "Mon, 20 Jul 2026 10:25:20 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079140592668528986#m",
+      "account": "omusubicororiin",
+      "text": "ポケカ『スタートデッキ100 』 今日の再販 まとめ✨ 店頭🏬 ✅ヨドバシ 複数店で条件付きで販売💡 今日抽選開始🚨 ✅ビックカメラ 関東複数店 ✅晴れる屋2 ✅竜星のPAO ✅ふるいち ✅カードボックス 一部店舗 📲店舗詳細と応募方法⏬ http://mikeco-room.com/startdeck100-r… 今日締切店舗も🚨 応募忘れずに!",
+      "link": "https://x.com/omusubicororiin/status/2079140592668528986#m",
+      "pubDate": "Mon, 20 Jul 2026 09:45:20 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079138202938662914#m",
+      "account": "NinjaMaruTCG",
+      "text": "RT by @NinjaMaruTCG: 何度でもいう。 マジで買っておいて良かった☺️",
+      "link": "https://x.com/NinjaMaruTCG/status/2079138202938662914#m",
+      "pubDate": "Mon, 20 Jul 2026 09:35:50 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079136806713614435#m",
+      "account": "gamegetnavi",
+      "text": "【ビックカメラ ポケカ 販売✨】 🏢池袋西口 ✅MEGAドリームex 完売しました☔️ 📲販売詳細👉http://gamenv.net/tc/biccamera/ #ポケモンカード #ポケカ #ビックカメラ メガドリーム",
+      "link": "https://x.com/gamegetnavi/status/2079136806713614435#m",
+      "pubDate": "Mon, 20 Jul 2026 09:30:17 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/V_Jump/status/2079136732704850423#m",
+      "account": "gamegetnavi",
+      "text": "RT by @gamegetnavi: ✨#Vジャンプ 9月特大号 明日7月21日発売✨ ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣ 🟦ふろくカード実物先行公開🟦 #DBSDV「孫悟飯:少年期」 アタッカーにするだけで、 自分を除く同じエリアの仲間全員のガードをアップさせることが可能! 戦いを有利に進めよう✊ #ドラゴンボール #dragonball #ドラゴンボールスーパーダイバーズ",
+      "link": "https://x.com/V_Jump/status/2079136732704850423#m",
+      "pubDate": "Mon, 20 Jul 2026 09:30:00 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/Zabi_pokeka/status/2079136079945584843#m",
+      "account": "Zabi_pokeka",
+      "text": "本日21時30分からヤマシロヤオンラインで「ストームエメラルダ/スターターセットex 3種」の抽選開始されます‼️ 【受付期間】 7月22日(水)21時30分〆 【当選発表】 7月27日(月) 抽選ページはこちら⬇️ https://docs.google.com/forms/d/e/1FAIpQLSf6Y52-X_k-OhWqSEsTwI_sWWGaePkIbLDk8l8VkSAk6w8fPg/",
+      "link": "https://x.com/Zabi_pokeka/status/2079136079945584843#m",
+      "pubDate": "Mon, 20 Jul 2026 09:27:24 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079135118313275479#m",
+      "account": "NinjaMaruTCG",
+      "text": "RT by @NinjaMaruTCG: シークレットが後ろや左列から出やすい… みたいな噂ありますけど 別に前の方や右列からでも 全然出るんでマジで意味ないですよ☺️",
+      "link": "https://x.com/NinjaMaruTCG/status/2079135118313275479#m",
+      "pubDate": "Mon, 20 Jul 2026 09:23:35 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/gamegetnavi/status/2079131868910465511#m",
+      "account": "gamegetnavi",
+      "text": "ヤマシロヤ・ポケカ抽選販売✨ ✅ストームエメラルダ ✅スターターセットex 3セット 　🔖イーブイex 　🔖ゾロア＆ゾロアークex 　🔖ニャオハ＆マスカーニャex 📅受付期間 7月20日(月)21:30〜7月22日(水)21:30 📲スレッド https://gamenv.net/tc/stores/#comment-333790 #ポケカ #ポケモンカード #トレカショップ",
+      "link": "https://x.com/gamegetnavi/status/2079131868910465511#m",
+      "pubDate": "Mon, 20 Jul 2026 09:10:40 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecachan/status/2079130230036496725#m",
+      "account": "pokecachan",
+      "text": "ヤマシロヤ（通販）より『ストームエメラルダ』『スターターセットex ３種』抽選が21時より開始💡 またお知らせします 📅抽選期間：7/20(月・祝) 21:30〜 7/22(水)21:30 🎯当選発表：7/27(月) 応募はこちら https://docs.google.com/forms/d/e/1FAIpQLSf6Y52-X_k-OhWqSEsTwI_sWWGaePkIbLDk8l8VkSAk",
+      "link": "https://x.com/pokecachan/status/2079130230036496725#m",
+      "pubDate": "Mon, 20 Jul 2026 09:04:09 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079130031981552007#m",
+      "account": "pokecayoyaku",
+      "text": "【ポケカ抽選情報】 トレカステーションで「ポケモンカードゲーム 拡張パック ストームエメラルダ」の抽選販売受付が開始⚡ 📅受付期間 7月26日 23:59まで 🎯当選発表 7月28日",
+      "link": "https://x.com/pokecayoyaku/status/2079130031981552007#m",
+      "pubDate": "Mon, 20 Jul 2026 09:03:22 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079129883767357485#m",
+      "account": "pokecayoyaku",
+      "text": "【ポケカ抽選情報】 トレカステーションで「ポケモンカードゲーム スターターセットex 3種(イーブイex・ニャオハ&マスカーニャex・ゾロア&ゾロアークex)」の抽選販売受付が開始⚡ 📅受付期間 7月26日 23:59まで 🎯当選発表 7月28日",
+      "link": "https://x.com/pokecayoyaku/status/2079129883767357485#m",
+      "pubDate": "Mon, 20 Jul 2026 09:02:47 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079129611414470900#m",
+      "account": "pokecayoyaku",
+      "text": "【ポケカ抽選情報】 ヤマシロヤで「ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ ／ スターターセットex(3種)」の抽選販売受付が告知されています⚡ 📅受付期間 7月20日 21:30 ～ 7月22日 21:30まで 🎯当選発表 7月27日 ✅応募ページ https://docs.google.com/forms/d/e/1FAIpQLSf6Y52-X_k-OhWqSEsTwI_",
+      "link": "https://x.com/pokecayoyaku/status/2079129611414470900#m",
+      "pubDate": "Mon, 20 Jul 2026 09:01:42 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079127435430490340#m",
+      "account": "NinjaMaruTCG",
+      "text": "RT by @NinjaMaruTCG: 定価割れするとさんざん言われてましたが 本当にするんでしょうか😱😱😱",
+      "link": "https://x.com/NinjaMaruTCG/status/2079127435430490340#m",
+      "pubDate": "Mon, 20 Jul 2026 08:53:03 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079123136226951439#m",
+      "account": "NinjaMaruTCG",
+      "text": "RT by @NinjaMaruTCG: 初動どうなるんだろコレ…",
+      "link": "https://x.com/NinjaMaruTCG/status/2079123136226951439#m",
+      "pubDate": "Mon, 20 Jul 2026 08:35:58 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079121354088141002#m",
+      "account": "omusubicororiin",
+      "text": "✅ジョーシン (Joshin) 『ストームエメラルダ』 『スターターセットex 3種』 抽選予約の応募は終わってますかー？ 締切今日の23時59分までなので忘れずに⚠️ 📲応募と詳細は下ポストのリンクから⏬",
+      "link": "https://x.com/omusubicororiin/status/2079121354088141002#m",
+      "pubDate": "Mon, 20 Jul 2026 08:28:53 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079107931270971685#m",
+      "account": "NinjaMaruTCG",
+      "text": "RT by @NinjaMaruTCG: え？どゆこと？😅",
+      "link": "https://x.com/NinjaMaruTCG/status/2079107931270971685#m",
+      "pubDate": "Mon, 20 Jul 2026 07:35:33 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079102286857658653#m",
+      "account": "omusubicororiin",
+      "text": "ワンピースカード 『受け継がれる意志』再販 情報✨ 店頭🏬 ✅イオン 一部店舗で販売あり💡 ✅カードキングダム 秋葉原 ※神の島も販売💡 抽選開始📲 ✅プレミアムバンダイ ・神の島 ・蒼海の七傑 も対象 ✅DMM通販 ・ヒロインズも対象 🏬再販・抽選店と応募詳細 👉http://mikeco-room.com/uketsugareruis…",
+      "link": "https://x.com/omusubicororiin/status/2079102286857658653#m",
+      "pubDate": "Mon, 20 Jul 2026 07:13:07 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/torecaclub_yuso/status/2079100746046546204#m",
+      "account": "Zabi_pokeka",
+      "text": "RT by @Zabi_pokeka: \"【7/20（月)　強化買取表】 一部カードの買取価格を強化しています！📢 本日も16:00より買取受付開始🔥 画像の買取表に無いカードも、検索結果に出てくるカードは買取可能✨ 売りたいカードをカートに追加してかんたんお申し込み👉 📩お申し込み・買取価格のチェックはリプ欄の公式LINEより！ 🚚送料＆返送料無料キャンペーン実施中！ #トレカクラブ #トレカク",
+      "link": "https://x.com/torecaclub_yuso/status/2079100746046546204#m",
+      "pubDate": "Mon, 20 Jul 2026 07:07:00 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079081163390636082#m",
+      "account": "omusubicororiin",
+      "text": "ワンピースカード 『決戦の刻』再販 抽選情報✨ 抽選受付は今日までです🚨 ✅ONE PIECEカードゲーム公式ショップ ✅麦わらストア 各店 受付📅 7/20(月)23:59まで 📲応募と抽選店詳細 http://mikeco-room.com/kessennotoki-r… 購入のチャンスなので応募忘れずに⚠️",
+      "link": "https://x.com/omusubicororiin/status/2079081163390636082#m",
+      "pubDate": "Mon, 20 Jul 2026 05:49:11 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079066413927670040#m",
+      "account": "omusubicororiin",
+      "text": "『スタートデッキ100 』再販 情報✨ ✅ヨドバシ 複数店舗 ・新宿西口 テラスタルフェスも販売🚨 ・新都心 インフェルノXも販売🚨 他にも販売店あり💡 ※条件あり ✅三洋堂 ✅フルコンプ ✅Japan TCG Center 一部店舗も販売 🏬再販店舗の詳細⏬ http://mikeco-room.com/startdeck100-r… お近くの方はお早めに🏃‍♀️",
+      "link": "https://x.com/omusubicororiin/status/2079066413927670040#m",
+      "pubDate": "Mon, 20 Jul 2026 04:50:34 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/Zabi_pokeka/status/2079061479551299692#m",
+      "account": "Zabi_pokeka",
+      "text": "ポケモンカードラウンジで拡張パック「ストームエメラルダ」「スターターセットex ゾロア＆ゾロアークex」の抽選開始されました‼️ 【受付期間】 7月21日(火)23時59分〆 【当選発表】 8月4日(火)18時以降 【購入期間】 8月11日(火)～8月13日(木) 抽選ページはこちら⬇️ https://cloud-pass.jp/pr/08f1f0e3e5cd9e49776d5b3b884737",
+      "link": "https://x.com/Zabi_pokeka/status/2079061479551299692#m",
+      "pubDate": "Mon, 20 Jul 2026 04:30:58 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/dbfw_cardgameJP/status/2079046180500279355#m",
+      "account": "gamegetnavi",
+      "text": "RT by @gamegetnavi: 【ST01 パラレル版カード紹介】 8/8(土)発売、『STORY BOOSTER 01』に収録するバトルカード「孫悟天/孫悟飯：青年期」のパラレル版実物写真をご紹介！ 🔽商品ページ https://www.dbs-cardgame.com/fw/jp/products/01_401.html #ドラゴンボール #フュージョンワールド",
+      "link": "https://x.com/dbfw_cardgameJP/status/2079046180500279355#m",
+      "pubDate": "Mon, 20 Jul 2026 03:30:10 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079044672975171747#m",
+      "account": "omusubicororiin",
+      "text": "『ストームエメラルダ』 今日のお昼時点での抽選予約情報まとめ📢 今日から開始🚨 ✅キデイランド ✅トレカエース ✅ポケモンカードラウンジ 📲各抽選店の応募と詳細 👉http://mikeco-room.com/stormemeralda-… 今日締切店舗も多いです⚠️ ✅Joshin ✅トイコンプ ✅晴れる屋2通販 ✅新星堂/WonderGOO/Ganryu ✅ファミマオンライン ✅オレタン ✅シ",
+      "link": "https://x.com/omusubicororiin/status/2079044672975171747#m",
+      "pubDate": "Mon, 20 Jul 2026 03:24:11 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecachan/status/2079039120945639460#m",
+      "account": "pokecachan",
+      "text": "R to @pokecachan: 本日開始しています",
+      "link": "https://x.com/pokecachan/status/2079039120945639460#m",
+      "pubDate": "Mon, 20 Jul 2026 03:02:07 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/sedokoX/status/2079033481003413749#m",
+      "account": "sedokoX",
+      "text": "Pinned: 8月8日発売なのにすでに高騰中😱💸 品薄状態のベイブレードXに新作登場✨ 【抽選販売】 BEYBLADE X UX-21 ヘルズネザーデッキセット ¥4,500 ベイブレード（特に第4世代の『ベイブレードX』）が転売の標的となっている主な理由は、アジア圏を中心とした世界的な爆発的人気に対してメーカーの生産・供給が完全に追いついておらず、国内外で深刻な品薄状態が続いているためです🙋‍",
+      "link": "https://x.com/sedokoX/status/2079033481003413749#m",
+      "pubDate": "Mon, 20 Jul 2026 02:39:43 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079032080655384754#m",
+      "account": "omusubicororiin",
+      "text": "『ポケモンカード』 ✅ビックカメラ複数店で再販抽選が開始してます🚨 【対象商品】 ・スタートデッキ100 ・インフェルノX ・アビスアイ ・ニンジャスピナー 店舗ごとに対象商品と条件が違います⚠️ 📲各店舗の詳細と応募方法は下ポストから⏬",
+      "link": "https://x.com/omusubicororiin/status/2079032080655384754#m",
+      "pubDate": "Mon, 20 Jul 2026 02:34:09 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/Eiichiro_Staff/status/2079024980428472558#m",
+      "account": "gamegetnavi",
+      "text": "RT by @gamegetnavi: 【本日〆切】 ⠀ 8.22(土)プレミア前夜祭＆ 8.23(日)『#ONEPIECEDAY’26』 幕張メッセで開催！ ⠀ 先行販売2次（抽選）チケット受付は 本日7.20(月)23:59まで📣！！ まだの方は、お忘れなく！ ⠀ ▼今すぐ応募する http://onepiece-day.onepiece-base.com ⠀ #ONEPIECE",
+      "link": "https://x.com/Eiichiro_Staff/status/2079024980428472558#m",
+      "pubDate": "Mon, 20 Jul 2026 02:05:56 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079023049018572983#m",
+      "account": "pokecayoyaku",
+      "text": "【ポケカ抽選情報】 トイコンプでポケモンカード「拡張パック ストームエメラルダ」の抽選受付中⚡ 📅受付期間 7月20日 23:59まで 🎯当選発表 7月22日 予定 🔗応募ページ https://toycomp.membercard.jp/",
+      "link": "https://x.com/pokecayoyaku/status/2079023049018572983#m",
+      "pubDate": "Mon, 20 Jul 2026 01:58:15 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2079017215106674981#m",
+      "account": "NinjaMaruTCG",
+      "text": "RT by @NinjaMaruTCG: 結構買ってるのに シークレットもっと欲しくて 追加で買ってしまった😱🤣",
+      "link": "https://x.com/NinjaMaruTCG/status/2079017215106674981#m",
+      "pubDate": "Mon, 20 Jul 2026 01:35:05 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2079014509633736912#m",
+      "account": "omusubicororiin",
+      "text": "『スタートデッキ100 』再販 抽選情報✨ ✅晴れる屋2 抽選が開始してます🚨 📅受付期間 7/22(水)18時まで! 🎯当選発表 7/23(木) 🛒購入期限 7/25(土)〜26(日) 📲店舗詳細と応募方法 👉http://mikeco-room.com/startdeck100-r… 現在他にも抽選店あり💡 そちらも一緒に確認できるので応募忘れずに🔍✨",
+      "link": "https://x.com/omusubicororiin/status/2079014509633736912#m",
+      "pubDate": "Mon, 20 Jul 2026 01:24:19 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079012650965664107#m",
+      "account": "pokecayoyaku",
+      "text": "【ポケカ抽選情報】 ポケモンカードラウンジでポケモンカード「ストームエメラルダ/スターターセットex ゾロア&ゾロアークex」の抽選販売受付が開始⚡ 📅受付期間 7月21日 23:59まで 🎯当選発表 8月4日 18:00以降 🔗応募ページ https://cloud-pass.jp/pr/08f1f0e3e5cd9e49776d5b3b884737d67d1e4eb9d2da8bb92d5b05",
+      "link": "https://x.com/pokecayoyaku/status/2079012650965664107#m",
+      "pubDate": "Mon, 20 Jul 2026 01:16:56 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079010769803632746#m",
+      "account": "pokecayoyaku",
+      "text": "【ポケカ抽選情報】 トレカエースでポケモンカード「ストームエメラルダ/スターターセットex 3種(イーブイex・ゾロア&ゾロアークex・ニャオハ&マスカーニャex)」の抽選販売受付が開始⚡ 📅受付期間 7月26日 23:59まで 🎯当選発表 7月29日",
+      "link": "https://x.com/pokecayoyaku/status/2079010769803632746#m",
+      "pubDate": "Mon, 20 Jul 2026 01:09:28 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecachan/status/2079010582297231408#m",
+      "account": "pokecachan",
+      "text": "ポケモンカードラウンジ「ストームエメラルダ」「スターターセットex ゾロア＆ゾロアークex」抽選開始💡 📅抽選期間：7月20日(月)10:00～7月21日(火)23:59 🎯当選発表：8月4日(火)18時以降順次 🛒購入期限：8月11日(火)～8月13日(木) 応募はこちら https://cloud-pass.jp/pr/08f1f0e3e5cd9e49776d5b3b884737d67d1e4",
+      "link": "https://x.com/pokecachan/status/2079010582297231408#m",
+      "pubDate": "Mon, 20 Jul 2026 01:08:43 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079009437814243566#m",
+      "account": "pokecayoyaku",
+      "text": "【ポケカ抽選情報】 キデイランドでポケモンカード「ストームエメラルダ」の抽選販売受付が開始⚡ 一部店舗は17日から開始しています。 📅受付期間 7月22日 23:59まで 🎯当選発表 7月29日 18:00頃までに 🔗応募ページ https://livepocket.jp/p/hpmzs",
+      "link": "https://x.com/pokecayoyaku/status/2079009437814243566#m",
+      "pubDate": "Mon, 20 Jul 2026 01:04:10 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecachan/status/2079009345304662304#m",
+      "account": "pokecachan",
+      "text": "晴れる屋2「スタートデッキ100」再販分の抽選開始 📅7月22日(水) 18:00まで https://docs.google.com/forms/d/e/1FAIpQLSd52col-N32IilZDdvhnOVI5Mfi6YiHIhql4S8LEv8_OoMJbw/viewform",
+      "link": "https://x.com/pokecachan/status/2079009345304662304#m",
+      "pubDate": "Mon, 20 Jul 2026 01:03:48 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2079009036947825101#m",
+      "account": "pokecayoyaku",
+      "text": "【ポケカ抽選情報】 晴れる屋2(店舗)でポケモンカードゲーム「スタートデッキ100 バトルコレクション」の抽選受付が開始⚡ 📅受付期間 7月22日 18:00 🎯当選発表 7月23日 🔗応募ページ https://docs.google.com/forms/d/e/1FAIpQLSd52col-N32IilZDdvhnOVI5Mfi6YiHIhql4S8LEv8_OoMJbw/viewform",
+      "link": "https://x.com/pokecayoyaku/status/2079009036947825101#m",
+      "pubDate": "Mon, 20 Jul 2026 01:02:35 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecachan/status/2079008392215994770#m",
+      "account": "pokecachan",
+      "text": "キデイランド『ストームエメラルダ BOX』抽選が開始💡注意点も載せておきます 📅抽選期間：7/20(月)10:00～7/22(水)23:59 🎯当選発表：7/29(水)18:00までにメール 🛒購入期限：7/31～8/2営業時間内 ・別店舗への重複応募は不可 ・当選の場合、身分証明が必要 ✅応募はこちら https://livepocket.jp/p/hpmzs",
+      "link": "https://x.com/pokecachan/status/2079008392215994770#m",
+      "pubDate": "Mon, 20 Jul 2026 01:00:01 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/SabukoX/status/2079007607944319222#m",
+      "account": "sedokoX",
+      "text": "RT by @sedokoX: 【Yahooｼｮｯﾋﾟﾝｸﾞ】PR コジマ ヤフショ SONY VLOGCAM ZV-1F ブラック ✅価格：73,560円‼️ ▶︎ﾎﾟｲﾝﾄ：17,817pt JAN: 4548736147041 https://yahoo.jp/nw-yQa?openExternalBrowser=1",
+      "link": "https://x.com/SabukoX/status/2079007607944319222#m",
+      "pubDate": "Mon, 20 Jul 2026 00:56:54 GMT",
+      "relevant": false
+    },
+    {
+      "id": "https://nitter.net/omusubicororiin/status/2078998472674709629#m",
+      "account": "omusubicororiin",
+      "text": "『ストームエメラルダ』抽選予約情報✨ ✅トレカエース 抽選が開始してます🚨 📅受付期間 7/26(日)まで 🎯当選発表 7/29(水) ※店舗によっては 『スターターセットex 3種』も受付💡 📲抽選店の応募と詳細 👉http://mikeco-room.com/stormemeralda-… 今応募できる抽選店もまとめてチェックできます🔍✨",
+      "link": "https://x.com/omusubicororiin/status/2078998472674709629#m",
+      "pubDate": "Mon, 20 Jul 2026 00:20:36 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/pokecayoyaku/status/2078996953824985397#m",
+      "account": "pokecayoyaku",
+      "text": "【まもなく終了】 今日、ポケモンカード「ストームエメラルダ・スターターセットex 3種(イーブイex・ニャオハ&マスカーニャex・ゾロア&ゾロアークex)」の抽選受付が終了する店舗まとめ⚡ 🏬晴れる屋2(通販) ✅ストームエメラルダ ⏰期限:15:00まで 🎯当:7/21 以降 🛒販売:7/21 ～ 7/27 15:00 🔗https://docs.google.com/forms/d/e/1FA",
+      "link": "https://x.com/pokecayoyaku/status/2078996953824985397#m",
+      "pubDate": "Mon, 20 Jul 2026 00:14:34 GMT",
+      "relevant": true
+    },
     {
       "id": "https://nitter.net/omusubicororiin/status/2078989058337120352#m",
       "account": "omusubicororiin",
@@ -53,7 +637,7 @@
     {
       "id": "https://nitter.net/NinjaMaruTCG/status/2078877668964221395#m",
       "account": "NinjaMaruTCG",
-      "text": "コレは流石にヤバすぎる… ドラゴンボール イタジャガ 10 ゴジータ シークレット https://jp.mercari.com/search?afid=2629177815&keyword=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB+%E3%82%A4%E3%82%BF%E3%82%B8%E3%83%A3%E3%",
+      "text": "RT by @NinjaMaruTCG: コレは流石にヤバすぎる… ドラゴンボール イタジャガ 10 ゴジータ シークレット https://jp.mercari.com/search?afid=2629177815&keyword=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB+%E3%82%A4%E3%82%BF%",
       "link": "https://x.com/NinjaMaruTCG/status/2078877668964221395#m",
       "pubDate": "Sun, 19 Jul 2026 16:20:34 GMT",
       "relevant": true
@@ -445,7 +1029,7 @@
     {
       "id": "https://nitter.net/sedokoX/status/2078668976532721904#m",
       "account": "sedokoX",
-      "text": "Pinned: 世界1969本限定‼️ 価格10万なのに18万円分のゴールドが使われてます😳✨ 【抽選販売】 OMEGA × Swatch MISSION TO THE MOON 1969 ¥102,300 月面着陸を記念した超限定クロノグラフが登場！ 合計11gのOMEGA 18K Moonshine Goldを使用✨ 18万円相当の18Kゴールドが詰まった豪華仕様で、1969年のOmegaスペ",
+      "text": "世界1969本限定‼️ 価格10万なのに18万円分のゴールドが使われてます😳✨ 【抽選販売】 OMEGA × Swatch MISSION TO THE MOON 1969 ¥102,300 月面着陸を記念した超限定クロノグラフが登場！ 合計11gのOMEGA 18K Moonshine Goldを使用✨ 18万円相当の18Kゴールドが詰まった豪華仕様で、1969年のOmegaスペアパーツを溶かし",
       "link": "https://x.com/sedokoX/status/2078668976532721904#m",
       "pubDate": "Sun, 19 Jul 2026 02:31:18 GMT",
       "relevant": true
@@ -549,7 +1133,7 @@
     {
       "id": "https://nitter.net/gamegetnavi/status/2078483108719182040#m",
       "account": "gamegetnavi",
-      "text": "イタジャガ ドラゴンボール vol.10 食玩🍫 📅2026年7月30日発売 構図・ポーズ・影等、オリジナル描きおろしイラストを収録❗ 全種メタリックプラカードの豪華仕様✨ 全30種/うちシークレット2種 プレミアムバンダイは即完売☔ Amazon先着予約⏩https://amzn.to/4pyiCru #ドラゴンボール #AD",
+      "text": "RT by @gamegetnavi: イタジャガ ドラゴンボール vol.10 食玩🍫 📅2026年7月30日発売 構図・ポーズ・影等、オリジナル描きおろしイラストを収録❗ 全種メタリックプラカードの豪華仕様✨ 全30種/うちシークレット2種 プレミアムバンダイは即完売☔ Amazon先着予約⏩https://amzn.to/4pyiCru #ドラゴンボール #AD",
       "link": "https://x.com/gamegetnavi/status/2078483108719182040#m",
       "pubDate": "Sat, 18 Jul 2026 14:12:44 GMT",
       "relevant": true
@@ -936,6 +1520,14 @@
       "text": "ポケカ『スタートデッキ100 』 再販 抽選情報✨ 今日締切⚠️ ✅ふるいち ✅カードラボ 明日締切の店舗も多数🚨 ✅TSUTAYA ✅カードボックス ✅しまむらパーク ✅アリオ ✅MINTGAMES ✅勝木書店大野店 📲店舗詳細はスタデ再販まとめから http://mikeco-room.com/startdeck100-r… お近くの店舗があるかチェック👆",
       "link": "https://x.com/omusubicororiin/status/2078287466382172345#m",
       "pubDate": "Sat, 18 Jul 2026 01:15:19 GMT",
+      "relevant": true
+    },
+    {
+      "id": "https://nitter.net/NinjaMaruTCG/status/2078285828162494509#m",
+      "account": "NinjaMaruTCG",
+      "text": "RT by @NinjaMaruTCG: 予約再開されてるよ👍 今回も付録めちゃくちゃ豪華やで☺️ 自分と同じようにまとめ買いしてたり 発売日に買いに行く時間を違う事に使いたい方はお早めに😎",
+      "link": "https://x.com/NinjaMaruTCG/status/2078285828162494509#m",
+      "pubDate": "Sat, 18 Jul 2026 01:08:48 GMT",
       "relevant": true
     },
     {
@@ -2609,607 +3201,15 @@
       "link": "https://x.com/SabukoX/status/2077395417499865181#m",
       "pubDate": "Wed, 15 Jul 2026 14:10:38 GMT",
       "relevant": false
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077394809900372154#m",
-      "account": "omusubicororiin",
-      "text": "今日も1日お仕事や学校お疲れ様でした✨ 今日はストームエメラルダの抽選開始店が多かったですねー！ 情報整理できてない方は、今日のポストにまとめてるのでぜひご活用ください😊 抽選も中盤戦になり慌ただしくなってますが、皆様が無事にゲットできます様に🙏✨",
-      "link": "https://x.com/omusubicororiin/status/2077394809900372154#m",
-      "pubDate": "Wed, 15 Jul 2026 14:08:13 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077390549821390864#m",
-      "account": "NinjaMaruTCG",
-      "text": "RT by @NinjaMaruTCG: シリカゲルちょっと捕捉させて下さい！ 今回紹介したA型のシリカゲルは湿度が高い今の時期には良いんだけど 逆に湿度が低い秋冬になると乾燥しすぎる 可能性があるので 出来るだけ管理する手間を減らしたい方は こっちのシリカゲルB型を 使って下さいませ☺️ ただ個人的には今の時期以外で 乾燥剤って使わないので同じような方は Ａ型でも良いと思います👍 乾燥剤 シリカ",
-      "link": "https://x.com/NinjaMaruTCG/status/2077390549821390864#m",
-      "pubDate": "Wed, 15 Jul 2026 13:51:17 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/Zabi_pokeka/status/2077387644519268672#m",
-      "account": "Zabi_pokeka",
-      "text": "本日告知or開始された抽選まとめ💁‍♂️ 7/15最新 【ストームエメラルダ】 ✅Bee本舗通販 7/17(金)20:00〆 https://docs.google.com/forms/d/e/1FAIpQLSdQO-LDj7URwxAGyhW1N43cB58ymgJgEsXlXyQeDMrVWfCqVA/alreadyresponded ✅晴れる屋2通販 7/20(月)15:00〆 https:",
-      "link": "https://x.com/Zabi_pokeka/status/2077387644519268672#m",
-      "pubDate": "Wed, 15 Jul 2026 13:39:45 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077383857008169224#m",
-      "account": "omusubicororiin",
-      "text": "R to @omusubicororiin: 『ストームエメラルダ・スターターセットex』抽選 予約店舗まとめ✨ 今日はたくさんの店舗で抽選開始してます🚨 開始店舗のチェックと応募忘れずに⚠️ 📲各抽選店の応募と詳細まとめ https://mikeco-room.com/stormemeralda-lottery/ 今 応募できる店舗をまとめてチェックできます🔍✨ 情報整理したい方もぜひ参考に💡",
-      "link": "https://x.com/omusubicororiin/status/2077383857008169224#m",
-      "pubDate": "Wed, 15 Jul 2026 13:24:42 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077383124338810995#m",
-      "account": "omusubicororiin",
-      "text": "『ストームエメラルダ・スターターセットex』抽選 予約まとめ✨ 抽選開始🚨 ✅ポケモンセンター ✅ファミマオンライン ✅ポケモンカードラウンジ ✅晴れる屋2 ✅Bee本舗 ✅イエローサブマリン ✅ドラゴンスター ✅オレタン 抽選告知あり💡 ✅ジョーシン 📲各店舗の応募と詳細まとめはリプ欄から👇",
-      "link": "https://x.com/omusubicororiin/status/2077383124338810995#m",
-      "pubDate": "Wed, 15 Jul 2026 13:21:47 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/sedokoX/status/2077380700345606219#m",
-      "account": "sedokoX",
-      "text": "R to @sedokoX: ストームエメラルダ BOX ポケモンカード 🔻Amazon《PR》 https://www.amazon.co.jp/dp/B0GP928YDZ?aod=1&m=AN1VRQENFRJN5&tag=otokuzyohokyoku-22 🔻Yahooショッピング《PR》 https://yahoo.jp/zWPuPu?openExternalBrowser=1 🔻メルカ",
-      "link": "https://x.com/sedokoX/status/2077380700345606219#m",
-      "pubDate": "Wed, 15 Jul 2026 13:12:09 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/sedokoX/status/2077380695740359046#m",
-      "account": "sedokoX",
-      "text": "Bee本舗通販サイトでweb抽選🎯 定価でゲットするチャンス✨ 【抽選販売】 ストームエメラルダ BOX ✅価格：6,000円‼️ 📅応募期間 7月15日(水)～7月17日(金)20:00まで 🚚発送日 順次発送 ※転売行為はお控えください 👇応募ページはリプ欄へ👇",
-      "link": "https://x.com/sedokoX/status/2077380695740359046#m",
-      "pubDate": "Wed, 15 Jul 2026 13:12:08 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/Zabi_pokeka/status/2077376931239231636#m",
-      "account": "Zabi_pokeka",
-      "text": "7/15(水)トレカ情報まとめ ザビニュース📺 いいね リポスト フォロー ぜひお願いします🔥 ✅ギラティナV SA レリーフ抜け PSA10 2,333,333円で取引される📈 ✅9月16日(水)発売 30th CELEBRATION ローソン 最大19BOX入荷✨️ ✅新時代の主役 大台の70,000円台で取引され始める📈",
-      "link": "https://x.com/Zabi_pokeka/status/2077376931239231636#m",
-      "pubDate": "Wed, 15 Jul 2026 12:57:10 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077369786078732555#m",
-      "account": "NinjaMaruTCG",
-      "text": "ご期待に応えられず本当に申し訳ないです😭 残念ながらそんな力もなければ こんな数千円程度の利益で 大切なコレクションを売った事 一度もないんですよ☺️",
-      "link": "https://x.com/NinjaMaruTCG/status/2077369786078732555#m",
-      "pubDate": "Wed, 15 Jul 2026 12:28:47 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077367102944825631#m",
-      "account": "omusubicororiin",
-      "text": "ポケカ『ストームエメラルダ』 コンビニ販売情報まとめ📝 ✅ローソン ✅セブンイレブン ✅ファミリーマート ✅ミニストップ 各コンビニの販売開始時間や販売数 穴場など事前にチェック🔍✨ 👉コンビニ販売まとめ🏪 https://mikeco-room.com/convenience-stormemeralda/ コンビニで狙うには販売時間が重要です🚨",
-      "link": "https://x.com/omusubicororiin/status/2077367102944825631#m",
-      "pubDate": "Wed, 15 Jul 2026 12:18:07 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077364965896605734#m",
-      "account": "NinjaMaruTCG",
-      "text": "R to @NinjaMaruTCG: なんかコレクション整理してる時って めちゃくちゃ幸せだよね🤩",
-      "link": "https://x.com/NinjaMaruTCG/status/2077364965896605734#m",
-      "pubDate": "Wed, 15 Jul 2026 12:09:38 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077363040761344099#m",
-      "account": "NinjaMaruTCG",
-      "text": "RT by @NinjaMaruTCG: 整理してたら全然足らないから めちゃくちゃ追加した🤣",
-      "link": "https://x.com/NinjaMaruTCG/status/2077363040761344099#m",
-      "pubDate": "Wed, 15 Jul 2026 12:01:59 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077355175564783969#m",
-      "account": "pokecayoyaku",
-      "text": "【2026/7/15】 今日のポケモンカード抽選まとめです⚡ 👉開始 ・ポケモンセンター 👉追加 ・ドラゴンスター ・イエローサブマリン ・ファミマオンライン ・ポケモンカードラウンジ ・Joshin(ジョーシン) ・Bee本舗 ・晴れる屋2(通販) ・ホビーリンク・ジャパン 👉当選発表 ・イオンスタイルオンライン(ストームエメラルダ) 👉ポケカ30th記念商品のポケセン事前準備 ①デジタル庁提供",
-      "link": "https://x.com/pokecayoyaku/status/2077355175564783969#m",
-      "pubDate": "Wed, 15 Jul 2026 11:30:43 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077351335717175711#m",
-      "account": "omusubicororiin",
-      "text": "『ストームエメラルダ』抽選予約情報✨ ✅イトーヨーカドーネット通販 抽選受付は今日の23時59分までです🚨 応募がまだの方はお忘れなく⚠️ 🏬店舗の抽選にも備えて💡 応募方法も一緒にチェック🔍 ・スターターセットex も対象! 準備しておきましょう💪✨ 📲応募と抽選詳細はここからチェック👇",
-      "link": "https://x.com/omusubicororiin/status/2077351335717175711#m",
-      "pubDate": "Wed, 15 Jul 2026 11:15:28 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077347717496639574#m",
-      "account": "NinjaMaruTCG",
-      "text": "RT by @NinjaMaruTCG: 2025年 36 37合併号 ジャンプとポケモンコラボのやつ シュリンクフィルムとケースに入れて 保管してて 今フィルム交換する所なんだけど ほら！新品みたいでしょ☺️",
-      "link": "https://x.com/NinjaMaruTCG/status/2077347717496639574#m",
-      "pubDate": "Wed, 15 Jul 2026 11:01:05 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/sedokoX/status/2077342117744255013#m",
-      "account": "sedokoX",
-      "text": "RT by @sedokoX: 【セゾンプラチナ・ビジネス・アメリカン・エキスプレス®・カード】 仕入れ等にも活用できるクレジットカード🙋🏻‍♀️ 初年度年会費無料です！ こちらのURL経由でのご入会で、最大12,000円分相当のAmazonギフト券をプレゼント🎁 ✅ご紹介URLはこちら👇《PR》 https://tr-asp.saisoncard.co.jp/ad/p/r?medium=3&ad",
-      "link": "https://x.com/sedokoX/status/2077342117744255013#m",
-      "pubDate": "Wed, 15 Jul 2026 10:38:50 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077341297829106079#m",
-      "account": "omusubicororiin",
-      "text": "『MEGAドリームex』 再販 抽選まとめ✨　 抽選開始🚨 ✅ホビーリング・ジャパン プレミアムトレーナーボックス メガゲンガー メガエルレイド も対象! 今日締切🚨 ✅ヤマシロヤオンライン 受付中💡 ✅TSUTAYA ✅福福トレカ通販 など 👉メガドリーム抽選店と応募詳細 http://mikeco-room.com/megadreamex-re… ストームエメラルダでも忙しいですがこちらも忘れ",
-      "link": "https://x.com/omusubicororiin/status/2077341297829106079#m",
-      "pubDate": "Wed, 15 Jul 2026 10:35:35 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077335525531496695#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 ホビーリンク・ジャパンで「ポケモンカード」の抽選販売受付が開始⚡ ✅対象商品 プレミアムトレーナーボックス MEGA ハイクラスパック MEGAドリームex スターターセットMEGA メガゲンガーex スペシャルカードセット メガエルレイドex 📅受付期間 7月22日 23時59分 🎯当選発表 7月28日 📝抽選条件 2025年7月1日～2026年7月22日までの間に ホビーリ",
-      "link": "https://x.com/pokecayoyaku/status/2077335525531496695#m",
-      "pubDate": "Wed, 15 Jul 2026 10:12:38 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077333920740421700#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 晴れる屋2(通販)で「ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ」の抽選販売受付が開始⚡ 📅受付期間 7月20日 15:00まで 🎯当選発表 7月21日以降、当選メール送付 ✅応募ページ https://docs.google.com/forms/d/e/1FAIpQLSf_okIqYIb13pSQAzDw_5C_Gw3zhyIl_pB9pwWUsa3pXe",
-      "link": "https://x.com/pokecayoyaku/status/2077333920740421700#m",
-      "pubDate": "Wed, 15 Jul 2026 10:06:16 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077324721558094128#m",
-      "account": "omusubicororiin",
-      "text": "『スタートデッキ100 』再販 まとめ✨ ✅セブン 一部地域 ✅ヨドバシ ✅イオン ✅フルコンプ 一部店舗で販売💡 抽選今日から🚨 ✅PAO 青梅店 ✅カードラボ 受付中💡 ✅カードボックス ✅TSUTAYA ✅ゲオ など 👉スタデ再販・抽選店詳細をチェック http://mikeco-room.com/startdeck100-r… 応募も忘れずに⚠️",
-      "link": "https://x.com/omusubicororiin/status/2077324721558094128#m",
-      "pubDate": "Wed, 15 Jul 2026 09:29:43 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077324263422665042#m",
-      "account": "NinjaMaruTCG",
-      "text": "RT by @NinjaMaruTCG: 収録カード公開😱😱😱 マジで沢山買って良かった😭",
-      "link": "https://x.com/NinjaMaruTCG/status/2077324263422665042#m",
-      "pubDate": "Wed, 15 Jul 2026 09:27:53 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/Zabi_pokeka/status/2077323700001714370#m",
-      "account": "Zabi_pokeka",
-      "text": "晴れる屋2通販で拡張パック「ストームエメラルダ」の抽選開始されました‼️ 【受付期間】 7月20日(月)15時〆 【当選発表】 7月21日(火)以降 【購入期間】 7月21日(火)～ 7月27日(月)15時〆 抽選ページはこちら⬇️ https://docs.google.com/forms/d/e/1FAIpQLSf_okIqYIb13pSQAzDw_5C_Gw3zhyIl_pB9pwWUsa3",
-      "link": "https://x.com/Zabi_pokeka/status/2077323700001714370#m",
-      "pubDate": "Wed, 15 Jul 2026 09:25:39 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecachan/status/2077323302759182776#m",
-      "account": "pokecachan",
-      "text": "晴れる屋2(通販)より『ストームエメラルダ BOX』抽選が開始💡 📅抽選期間：7月15日（水）～ 7月20日（月）15:00 🎯当選発表：7月21日（火） 応募はこちら https://www.hareruya2.com/pages/146654363968",
-      "link": "https://x.com/pokecachan/status/2077323302759182776#m",
-      "pubDate": "Wed, 15 Jul 2026 09:24:04 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/sedokoX/status/2077318492572041602#m",
-      "account": "sedokoX",
-      "text": "R to @sedokoX: ストームエメラルダ BOX ポケモンカード 🔻Amazon《PR》 https://www.amazon.co.jp/dp/B0GP928YDZ?aod=1&m=AN1VRQENFRJN5&tag=otokuzyohokyoku-22 🔻Yahooショッピング《PR》 https://yahoo.jp/zWPuPu?openExternalBrowser=1 🔻メルカ",
-      "link": "https://x.com/sedokoX/status/2077318492572041602#m",
-      "pubDate": "Wed, 15 Jul 2026 09:04:57 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/sedokoX/status/2077318488742617144#m",
-      "account": "sedokoX",
-      "text": "ファミマオンラインでweb抽選🎯 定価でゲットするチャンス✨ 【抽選販売】 ストームエメラルダ BOX ✅価格：6,000円‼️ 📅応募期間 7/15(水) 10:00 〜 7/20(月) 23:59まで 🛒受取期間 8/7(金) ～ 8/20(木) ※転売行為はお控えください 👇応募ページはリプ欄へ👇",
-      "link": "https://x.com/sedokoX/status/2077318488742617144#m",
-      "pubDate": "Wed, 15 Jul 2026 09:04:57 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077314218119090279#m",
-      "account": "NinjaMaruTCG",
-      "text": "RT by @NinjaMaruTCG: とにかく安くジャンプを保管したい！ って方にも一応オススメ紹介しとくね🤩 暗所で平置き保管するならマジでオススメ👍 個人的に感じたデメリットだけ ⚫︎サイズが少し大きいから、数が増えると場所をとる ⚫︎縦置きはNG（画像3枚目の出っ張った部分でたぶん痕がつきます😱） ⚫︎（大丈夫なんだろうけど）真っ平らではないのも少し気になる って感じかな☺️ あとは乾燥",
-      "link": "https://x.com/NinjaMaruTCG/status/2077314218119090279#m",
-      "pubDate": "Wed, 15 Jul 2026 08:47:58 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/Zabi_pokeka/status/2077314065354088589#m",
-      "account": "Zabi_pokeka",
-      "text": "ローソン🏪 9月16日(水)発売「30th CELEBRATION」 最大 19BOX入荷 また発売が近づいたら再度ポストします🙆‍♂️ #ポケモンカード #ポケカ",
-      "link": "https://x.com/Zabi_pokeka/status/2077314065354088589#m",
-      "pubDate": "Wed, 15 Jul 2026 08:47:22 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/torecaclub_yuso/status/2077294925293699082#m",
-      "account": "Zabi_pokeka",
-      "text": "RT by @Zabi_pokeka: \"【7/15（水)　強化買取表】① 一部カードの買取価格を強化しています！📢 本日も16:00より買取受付開始🔥 画像の買取表に無いカードも、検索結果に出てくるカードは買取可能✨ 売りたいカードをカートに追加してかんたんお申し込み👉 📩お申し込み・買取価格のチェックはリプ欄の公式LINEより！ 🚚送料＆返送料無料キャンペーン実施中！ #トレカクラブ #トレカ",
-      "link": "https://x.com/torecaclub_yuso/status/2077294925293699082#m",
-      "pubDate": "Wed, 15 Jul 2026 07:31:19 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/torecaclub_yuso/status/2077294433910063615#m",
-      "account": "Zabi_pokeka",
-      "text": "RT by @Zabi_pokeka: \"【7/15（水)　強化買取表】② 一部カードの買取価格を強化しています！📢 本日も16:00より買取受付開始🔥 画像の買取表に無いカードも、検索結果に出てくるカードは買取可能✨ 売りたいカードをカートに追加してかんたんお申し込み👉 📩お申し込み・買取価格のチェックはリプ欄の公式LINEより！ 🚚送料＆返送料無料キャンペーン実施中！ #トレカクラブ #トレカ",
-      "link": "https://x.com/torecaclub_yuso/status/2077294433910063615#m",
-      "pubDate": "Wed, 15 Jul 2026 07:29:21 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecachan/status/2077278526408175723#m",
-      "account": "pokecachan",
-      "text": "【ポケカ抽選販売】 Joshinアプリ『ストームエメラルダ』『スターターセットex ３種』抽選が発表💡 📅抽選期間：7/17(金)〜7/20(月祝)23:59まで 🎯当選発表：7/28(火) 🛒店舗での購入期間：7/31〜8/6 応募＞マイページ＞店舗限定キャンペーンエントリー ※シルバースマイル会員以上",
-      "link": "https://x.com/pokecachan/status/2077278526408175723#m",
-      "pubDate": "Wed, 15 Jul 2026 06:26:09 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077278419235299543#m",
-      "account": "omusubicororiin",
-      "text": "『ストームエメラルダ・スターターセットex 3種』抽選予約情報✨ ✅ジョーシン 抽選案内の告知ありです🚨 受付 📅7/17(金)〜7/20(月)23:59まで 当選 🎯7/28(火)15時頃 📲Joshin抽選応募と詳細 http://mikeco-room.com/joshin-stormem… 初めての方にも応募方法をわかりやすくご紹介📝 応募忘れずに💡",
-      "link": "https://x.com/omusubicororiin/status/2077278419235299543#m",
-      "pubDate": "Wed, 15 Jul 2026 06:25:43 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077278049901679033#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 Joshin(ジョーシン)で「拡張パック ストームエメラルダ/スターターセットex 3種」の抽選販売受付が予告されています⚡ 📅受付期間 7月17日 ～ 7月20日 23:59まで 🎯当選発表 7月28日 15:00頃 🛒購入期間 7月31日 ～ 8月6日 ✅応募方法 Joshin(ジョーシン)アプリ→マイページ→店舗限定キャンペーンエントリーより応募 シルバースマイル会員以上",
-      "link": "https://x.com/pokecayoyaku/status/2077278049901679033#m",
-      "pubDate": "Wed, 15 Jul 2026 06:24:15 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/Zabi_pokeka/status/2077278005517570487#m",
-      "account": "Zabi_pokeka",
-      "text": "Joshinで「ストームエメラルダ」「スターターセットex」の抽選告知されました‼️ 【受付期間】 7月17日(金)～7月20日(月)23時59分〆 【当選発表】 7月28日(火)15時頃 Joshinアプリから応募 ※シルバースマイル会員以上が対象",
-      "link": "https://x.com/Zabi_pokeka/status/2077278005517570487#m",
-      "pubDate": "Wed, 15 Jul 2026 06:24:05 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/gamegetnavi/status/2077276057057866197#m",
-      "account": "gamegetnavi",
-      "text": "竜星のPAO『ポケモンカード』抽選受付開始✨ 🏢青梅店 ✅スタートデッキ100 バトルコレクション 📅抽選受付期間 7月16日(木)23:50まで 🎯当選発表 7月17日(金) 🛒購入期間 7月18日(土)～7月20日(月) 抽選URL⏩https://gamenv.net/tc/stores/#comment-331793 #ポケモンカード #ポケカ #竜星のPAO",
-      "link": "https://x.com/gamegetnavi/status/2077276057057866197#m",
-      "pubDate": "Wed, 15 Jul 2026 06:16:20 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/sedokoX/status/2077266829836464407#m",
-      "account": "sedokoX",
-      "text": "R to @sedokoX: ストームエメラルダ BOX ポケモンカード 🔻Amazon《PR》 https://www.amazon.co.jp/dp/B0GP928YDZ?aod=1&m=AN1VRQENFRJN5&tag=otokuzyohokyoku-22 🔻Yahooショッピング《PR》 https://yahoo.jp/zWPuPu?openExternalBrowser=1 🔻メルカ",
-      "link": "https://x.com/sedokoX/status/2077266829836464407#m",
-      "pubDate": "Wed, 15 Jul 2026 05:39:40 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/sedokoX/status/2077266826095169851#m",
-      "account": "sedokoX",
-      "text": "ポケモンカードラウンジ(東京)でweb抽選🎯 定価でゲットするチャンス✨ 【抽選販売】 1️⃣ ストームエメラルダ BOX 価格：6,000円 2️⃣ イーブイex 価格：1,800円 📅応募期間 〆7月16日(木)23:59まで 🛒購入期間 8月7日(金)～8月9日(日) ※転売行為はお控えください 👇応募ページはリプ欄へ👇",
-      "link": "https://x.com/sedokoX/status/2077266826095169851#m",
-      "pubDate": "Wed, 15 Jul 2026 05:39:39 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077263892288622694#m",
-      "account": "pokecayoyaku",
-      "text": "R to @pokecayoyaku: 🔗ナゴヤ https://shop.pokemon.co.jp/ja/shop/pokemoncenter-nagoya/news/202607/000411.html",
-      "link": "https://x.com/pokecayoyaku/status/2077263892288622694#m",
-      "pubDate": "Wed, 15 Jul 2026 05:28:00 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/Zabi_pokeka/status/2077263690630623640#m",
-      "account": "Zabi_pokeka",
-      "text": "Bee本舗通販で拡張パック「ストームエメラルダ」の抽選開始されました‼️ 【受付期間】 7月17日(金)20時〆 【当選発表】 7月31日(金) 【購入期限】 7月31日(金)～8月2日(日)23時59分 抽選はこちら⬇️ https://docs.google.com/forms/d/e/1FAIpQLSdQO-LDj7URwxAGyhW1N43cB58ymgJgEsXlXyQeDMrVWfCq",
-      "link": "https://x.com/Zabi_pokeka/status/2077263690630623640#m",
-      "pubDate": "Wed, 15 Jul 2026 05:27:12 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077261490403541127#m",
-      "account": "pokecayoyaku",
-      "text": "R to @pokecayoyaku: ✅応募URL記載ページ 🔗サッポロ https://shop.pokemon.co.jp/ja/shop/pokemoncenter-sapporo/news/202607/000420.html 🔗トウホク https://shop.pokemon.co.jp/ja/shop/pokemoncenter-tohoku/news/202607/000417.",
-      "link": "https://x.com/pokecayoyaku/status/2077261490403541127#m",
-      "pubDate": "Wed, 15 Jul 2026 05:18:27 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecachan/status/2077259541201449422#m",
-      "account": "pokecachan",
-      "text": "R to @pokecachan: shop.pokemon.co.jp/ja/",
-      "link": "https://x.com/pokecachan/status/2077259541201449422#m",
-      "pubDate": "Wed, 15 Jul 2026 05:10:42 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077259524495552693#m",
-      "account": "pokecayoyaku",
-      "text": "👉抽選申込方法 ①URLクリック URLをクリックすると承認画面が表示されます。（LINEがインストールされている必要あり） ②「許可する」ボタンタップ 初めてアクセスするときは「認証」画面が表示されます。下部の「許可する」ボタンをタップ。 ③「注意事項」を確認 ④「日付」を選択 下部にある「日付」をタップすると時間枠が表示されます。希望の時間枠を選択して応。各呼出時間枠について、当選された方は2",
-      "link": "https://x.com/pokecayoyaku/status/2077259524495552693#m",
-      "pubDate": "Wed, 15 Jul 2026 05:10:38 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecachan/status/2077259235499634949#m",
-      "account": "pokecachan",
-      "text": "ポケモンセンター店舗より『ストームエメラルダ BOX』『スターターセットex ３種』抽選が開始💡 対象店舗は画像の通り 📅抽選対象店舗①：7/15(水)14時 ～ 7/17(金)23時59分 🎯当選発表①：7月21日(火)12時から順次 ✅応募方法：LINEミニアプリ「モギリーLite」を使用した事前抽選 ⚠️注意事項：お1人様のご応募は「いずれか1店舗のみ」 🔗抽選申し込みリンク https:/",
-      "link": "https://x.com/pokecachan/status/2077259235499634949#m",
-      "pubDate": "Wed, 15 Jul 2026 05:09:30 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077258610024096040#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 ポケモンセンターで「拡張パック ストームエメラルダ/スターターセットex 3種」抽選受付が開始⚡ 🛒購入制限 ストームエメラルダ: 1人20パックまで スターターセットex イーブイex・ゾロア&ゾロアークex・ニャオハ&マスカーニャex: 1人1個まで 🏬対象店舗 ポケモンセンターサッポロ、トウホク、トウキョーDX、トウキョーベイ、ナゴヤ、フクオカ、ヒロシマ、オキナワ 📝応募",
-      "link": "https://x.com/pokecayoyaku/status/2077258610024096040#m",
-      "pubDate": "Wed, 15 Jul 2026 05:07:00 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077257381034299509#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 Bee本舗で「ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ」の抽選販売受付が開始⚡ 📅受付期間 7月17日 20:00まで 🎯当選発表 7月31日 🔗応募ページ https://docs.google.com/forms/d/e/1FAIpQLSdQO-LDj7URwxAGyhW1N43cB58ymgJgEsXlXyQeDMrVWfCqVA/viewform",
-      "link": "https://x.com/pokecayoyaku/status/2077257381034299509#m",
-      "pubDate": "Wed, 15 Jul 2026 05:02:07 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077257190004645989#m",
-      "account": "omusubicororiin",
-      "text": "✅ポケモンセンター １回目の抽選予約が開始してます🚨 対象商品✨ ・ストームエメラルダ ・スターターセットex 対象店舗(地域)によって受付期間が違うので注意⚠️ 受付期間も短いので応募忘れずに! 📲対象店舗と応募詳細はこちらのポストから👇",
-      "link": "https://x.com/omusubicororiin/status/2077257190004645989#m",
-      "pubDate": "Wed, 15 Jul 2026 05:01:22 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/gamegetnavi/status/2077256848000864397#m",
-      "account": "gamegetnavi",
-      "text": "ポケモンセンター店頭ポケカ抽選受付を開始✨ ✅ストームエメラルダ20P ✅スターターセットex 🔖イーブイex 🔖ゾロア＆ゾロアークex 🔖ニャオハ＆マスカーニャex -------------------- 📲応募期間① 7月15日(水)14時～7月17日(金) 🏢対象店舗① ・北海道/東北：ポケモンセンターサッポロ、ポケモンセンタートウホク ・関東：ポケモンセンタートウキョーDX、ポケモンセン",
-      "link": "https://x.com/gamegetnavi/status/2077256848000864397#m",
-      "pubDate": "Wed, 15 Jul 2026 05:00:00 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077247329158275380#m",
-      "account": "NinjaMaruTCG",
-      "text": "という事なので 今こんな感じですが🥹 焦って買う必要はないと思いますよ☺️ そもそも無在庫出品ですけど🤣",
-      "link": "https://x.com/NinjaMaruTCG/status/2077247329158275380#m",
-      "pubDate": "Wed, 15 Jul 2026 04:22:11 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077244056569352605#m",
-      "account": "NinjaMaruTCG",
-      "text": "RT by @NinjaMaruTCG: 今日店員さんから予約のことで わざわざ電話かけて下さって 説明を丁寧にしてくれたんですけど 受注といってもたぶんコラボ商品を購入して その時にカードが無ければ チケットを貰って後日受け取りに行く （このチケットに上限がないって事なんだと思います） っていうのは変わらないとは思います☺️ ただ初日に絶対欲しくてしょうがない って人じゃなければ急ぐ必要は全くな",
-      "link": "https://x.com/NinjaMaruTCG/status/2077244056569352605#m",
-      "pubDate": "Wed, 15 Jul 2026 04:09:11 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077238375107665943#m",
-      "account": "omusubicororiin",
-      "text": "✅ゲオ(GEO) 抽選予約の受付期間は明日までです🚨 【対象商品】 ・ストームエメラルダ ・スターターセットex 3種 ・スタートデッキ100 まだの方は今からでも条件クリアも間に合います！ 今回から追加の注意点もあるので 今日のうちに応募しておきましょー💡 📲応募と詳細はこちらのポストから👇",
-      "link": "https://x.com/omusubicororiin/status/2077238375107665943#m",
-      "pubDate": "Wed, 15 Jul 2026 03:46:36 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/gamegetnavi/status/2077237971321769990#m",
-      "account": "gamegetnavi",
-      "text": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士／OP-17 当選権利の失効迫っています⌛ Amazon在庫「カート追加」ボタンの確認を📲 「招待リクエスト」よりワンピースカードの応募👇 Amazon申込URL⏩https://amzn.to/4edQ5Cf #ワンピカード #ワンピース #ad #amazon #ワンピースカード",
-      "link": "https://x.com/gamegetnavi/status/2077237971321769990#m",
-      "pubDate": "Wed, 15 Jul 2026 03:45:00 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077237638579507542#m",
-      "account": "NinjaMaruTCG",
-      "text": "RT by @NinjaMaruTCG: 価値は下がるかもしれませんが みんな安全に確実に手に入るなら 最高ですね☺️ まったくもう最初からそうしろよ🤣",
-      "link": "https://x.com/NinjaMaruTCG/status/2077237638579507542#m",
-      "pubDate": "Wed, 15 Jul 2026 03:43:40 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/gamegetnavi/status/2077237246659551684#m",
-      "account": "gamegetnavi",
-      "text": "イトーヨーカドーネット通販『ストームエメラルダ』BOX抽選受付締め切り迫る⌛ 📅抽選受付期間 本日、7月15日(水)まで 🎯当選発表 7月31日(金)11:00 🛒購入期間 7月31日(金) 11:00より 📲抽選の詳細👉https://gamenv.net/tc/storm_itoyorkado/#web #ポケモンカード #ポケカ #スターターセットex #イトーヨーカドー",
-      "link": "https://x.com/gamegetnavi/status/2077237246659551684#m",
-      "pubDate": "Wed, 15 Jul 2026 03:42:07 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/gamegetnavi/status/2077230112567971951#m",
-      "account": "gamegetnavi",
-      "text": "イオンスタイルオンライン『ストームエメラルダ』BOX抽選結果通知有り✨ ご応募された方に幸があります様に🙏 🛒購入期間（決済） 7月15日(水)12:00 〜 7月16日(木) 🚚発送 7月31日(金)以降順次出荷予定 購入上限：1BOX上限 🔗申込URL等 https://gamenv.net/tc/storm_aeon #ポケモンカード #ポケカ #ポケモンカード30周年 #Aeon",
-      "link": "https://x.com/gamegetnavi/status/2077230112567971951#m",
-      "pubDate": "Wed, 15 Jul 2026 03:13:46 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077229741770502559#m",
-      "account": "omusubicororiin",
-      "text": "トイザらス の『ストームエメラルダ』の抽選予約なかなか始まらないですね🥺 見かけた方いますかー？ 開始したら慌てずに応募するために💡 トイザらス抽選の応募方法や条件をまとめてるのでぜひ参考に💁‍♀️✨",
-      "link": "https://x.com/omusubicororiin/status/2077229741770502559#m",
-      "pubDate": "Wed, 15 Jul 2026 03:12:18 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077227301801197818#m",
-      "account": "pokecayoyaku",
-      "text": "【当落発表】 イオンスタイルオンラインの「ストームエメラルダ」抽選結果が発表されています⚡ 皆さん結果どうでしたか？ 結果はメール、商品ページで確認出来ます。 ✅商品ページ https://aeonretail.com/product/0/P-2135500003096/P-213550000309601/",
-      "link": "https://x.com/pokecayoyaku/status/2077227301801197818#m",
-      "pubDate": "Wed, 15 Jul 2026 03:02:36 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/sedokoX/status/2077226232102715476#m",
-      "account": "sedokoX",
-      "text": "R to @sedokoX: LEVI'S VINTAGE CLOTHING S506XX 1944 JACKET (IV2037-900) 🔻メルカリ《PR》 https://jp.mercari.com/search?afid=6181505276&keyword=IV2037-900&order=desc&sort=created_time 🔻スニダン https://snkrdunk.co",
-      "link": "https://x.com/sedokoX/status/2077226232102715476#m",
-      "pubDate": "Wed, 15 Jul 2026 02:58:21 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/sedokoX/status/2077226228424356218#m",
-      "account": "sedokoX",
-      "text": "2.4万が4万円に高騰中😭💸 Clubhouse by KAMO (東京渋谷) でweb抽選🎯 【抽選再販】 Travis Scott Cactus Jack × Nike Phantom 6 Low ELITE Indoor ✅価格：24,200円‼️ ➡️相場：約40,000円 📅応募期間 〆7月15日(水)23:59まで ※転売行為はお控えください 👇応募ページはリプ欄へ👇",
-      "link": "https://x.com/sedokoX/status/2077226228424356218#m",
-      "pubDate": "Wed, 15 Jul 2026 02:58:20 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077222593090973919#m",
-      "account": "NinjaMaruTCG",
-      "text": "RT by @NinjaMaruTCG: 流石にエグい…😱😱😱 少年ジャンプ 2026年 33号 ワンピース https://jp.mercari.com/search?afid=2629177815&keyword=%E5%B0%91%E5%B9%B4%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97+2026%E5%B9%B4%E3%80%8033%E5%8F%B7%E3",
-      "link": "https://x.com/NinjaMaruTCG/status/2077222593090973919#m",
-      "pubDate": "Wed, 15 Jul 2026 02:43:53 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/gamegetnavi/status/2077221336515236237#m",
-      "account": "gamegetnavi",
-      "text": "ヨドバシ 人気ポケカ 販売情報❗ ✅ニンジャスピナー 販売中❗ ベイブレードも昨日から継続… 販売速報⏩http://gamenv.net/tc/yodobashi/ #ポケカ #ポケモンカード #ヨドバシカメラ",
-      "link": "https://x.com/gamegetnavi/status/2077221336515236237#m",
-      "pubDate": "Wed, 15 Jul 2026 02:38:54 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/gamegetnavi/status/2077221025985732723#m",
-      "account": "gamegetnavi",
-      "text": "ファミマオンライン ポケカ抽選✨ ✅ストームエメラルダ 📅受付期間 7月20日(月)23:59まで 🎯当選発表 7月22日(水) 🛒購入期間 8月7日(金)～8月20日(木) 📲抽選URL👉 https://famima-online.family.co.jp/item?itemCode=100161237379677400 #ポケモンカード #ポケカ #ファミリーマート #スターターセットex",
-      "link": "https://x.com/gamegetnavi/status/2077221025985732723#m",
-      "pubDate": "Wed, 15 Jul 2026 02:37:40 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/gamegetnavi/status/2077214392895385751#m",
-      "account": "gamegetnavi",
-      "text": "ポケカラウンジ ポケカ抽選受付開始✨ 【対象商品は下記の2ndロット分】 ✅スートムエメラルダ 2BOX ✅スターターセットex 🔖イーブイex 📲応募期間 7月15日(水)～7月16日(木)23:59 🎯当選発表 7月31日(金)18時以降順次 🛒購入期間 8月7日(金)～8月9日(日) ✅申込URL等👉 https://gamenv.net/tc/stores/comment-page-669",
-      "link": "https://x.com/gamegetnavi/status/2077214392895385751#m",
-      "pubDate": "Wed, 15 Jul 2026 02:11:18 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077202522385846725#m",
-      "account": "omusubicororiin",
-      "text": "R to @omusubicororiin: 『ストームエメラルダ・スターターセットex』抽選 予約店舗まとめ✨ 👉各抽選店の応募と詳細まとめ https://mikeco-room.com/stormemeralda-lottery/ 現在応募できる店舗をまとめてチェックできます🔍✨ 情報整理したい方もぜひ参考に🙏✨",
-      "link": "https://x.com/omusubicororiin/status/2077202522385846725#m",
-      "pubDate": "Wed, 15 Jul 2026 01:24:08 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077202154063094207#m",
-      "account": "pokecayoyaku",
-      "text": "R to @pokecayoyaku: 🎯当選発表 7月31日(金) 18:00以降",
-      "link": "https://x.com/pokecayoyaku/status/2077202154063094207#m",
-      "pubDate": "Wed, 15 Jul 2026 01:22:40 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/omusubicororiin/status/2077201961997480271#m",
-      "account": "omusubicororiin",
-      "text": "『ストームエメラルダ・スターターセットex』抽選 予約情報✨ 抽選が開始してます🚨 ✅ファミマオンライン ✅ポケモンカードラウンジ こちらも受付中💡 ✅イエローサブマリン ✅ドラゴンスター ✅オレタン 📲各店舗の応募と詳細はリプ欄から👇 今 応募できる店舗を一気に確認できます🔍✨",
-      "link": "https://x.com/omusubicororiin/status/2077201961997480271#m",
-      "pubDate": "Wed, 15 Jul 2026 01:21:54 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077200591663792591#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 熊本県内TSUTAYAで「ポケモンカードゲーム MEGA 拡張パック アビスアイ」の抽選販売受付が開始⚡ 📅受付期間 7月19日 23:59まで 🎯当選発表 7月22日",
-      "link": "https://x.com/pokecayoyaku/status/2077200591663792591#m",
-      "pubDate": "Wed, 15 Jul 2026 01:16:28 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecachan/status/2077198360495419434#m",
-      "account": "pokecachan",
-      "text": "【ポケカ抽選販売】 ポケモンカードラウンジ『ストームエメラルダ』抽選が開始💡 📅期間：7月16日（木） 23:59まで 🎯当選結果：7月31日(金) 18時以降順次 https://cloud-pass.jp/pr/cac256ff1189dc31f53d7240aa05f5dc7db6fdd68302bcced48978a368f87294",
-      "link": "https://x.com/pokecachan/status/2077198360495419434#m",
-      "pubDate": "Wed, 15 Jul 2026 01:07:36 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077198105196552651#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 ポケモンカードラウンジでポケモンカード「ストームエメラルダ・スターターセットex イーブイex」の抽選販売受付が開始⚡ 📅受付期間 2026年7月16日（木） 23:59まで 🎯当選発表 2026年7月16日（木） 23:59 https://cloud-pass.jp/pr/cac256ff1189dc31f53d7240aa05f5dc7db6fdd68302bcced48",
-      "link": "https://x.com/pokecayoyaku/status/2077198105196552651#m",
-      "pubDate": "Wed, 15 Jul 2026 01:06:35 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecachan/status/2077197755861336300#m",
-      "account": "pokecachan",
-      "text": "【ポケカ抽選販売】 ファミマオンライン『ストームエメラルダ』抽選が開始💡注意事項も載せておきます 📅期間：7/20(月) 23:59まで 🎯当選結果：7/22(水) 🛒店舗受け取り期間：8/07(金) ～08/20(木) ⚠️応募時にBOX価格の決済または引き落としとなり、落選の場合は返金となります https://famima-online.family.co.jp/item?itemCode=",
-      "link": "https://x.com/pokecachan/status/2077197755861336300#m",
-      "pubDate": "Wed, 15 Jul 2026 01:05:12 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077197415468384506#m",
-      "account": "pokecayoyaku",
-      "text": "📝応募方法 応募条件は現在メールマガジンにご登録いただいている方、もしくは応募期間中にファミマオンラインのメルマガに登録されている方。 ①マイページへファミマオンラインTOP画面上部の「マイページ（人型のアイコン）」をタップ ②登録内容確認へ画面上部の「登録内容確認/変更（紙とペンのアイコン）」をタップ ③登録完了！会員登録内容のメルマガ登録の「登録する（チェックボックス）」をチェックで登録完了",
-      "link": "https://x.com/pokecayoyaku/status/2077197415468384506#m",
-      "pubDate": "Wed, 15 Jul 2026 01:03:50 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077197138149429552#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 ファミマオンラインでポケモンカード「拡張パック ストームエメラルダ」の抽選販売受付が開始⚡ 📅受付期間 2026/07/20(月) 23:59まで 🎯当選発表 2026/07/22(水) 🔗応募ページ https://famima-online.family.co.jp/item?itemCode=100161237379677400",
-      "link": "https://x.com/pokecayoyaku/status/2077197138149429552#m",
-      "pubDate": "Wed, 15 Jul 2026 01:02:44 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077196807118127430#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 イエローサブマリンでポケモンカード「ストームエメラルダ/スターターセットex 3種」の抽選販売受付が開始⚡ 📅受付期間 7月26日 20:00まで 🎯当選発表 7月30日 予定 🛒購入期間 7月31日 ～ 8月3日",
-      "link": "https://x.com/pokecayoyaku/status/2077196807118127430#m",
-      "pubDate": "Wed, 15 Jul 2026 01:01:25 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/gamegetnavi/status/2077196451604787635#m",
-      "account": "gamegetnavi",
-      "text": "「イエローサブマリン」人気ポケモンカード抽選受付を開始✨ ✅ストームエメラルダ ✅スターターセットex 🔖イーブイex 🔖ゾロア＆ゾロアークex 🔖ニャオハ＆マスカーニャex 📅受付期間 7月15日(水)〜7月26日(日)20:00 🎯当選発表 7月30日(木)予定 🛒購入期間 7月31日(金)～8月3日(月) 📲申込方法 店頭QRコード＋レシート ✅スレッド👉 https://gamenv.ne",
-      "link": "https://x.com/gamegetnavi/status/2077196451604787635#m",
-      "pubDate": "Wed, 15 Jul 2026 01:00:01 GMT",
-      "relevant": true
-    },
-    {
-      "id": "https://nitter.net/NinjaMaruTCG/status/2077192286686081265#m",
-      "account": "NinjaMaruTCG",
-      "text": "RT by @NinjaMaruTCG: ほーら、やっぱり！ 早速、シュリンクフィルムを使って 高値で売ってる方いますね☺️✨ これを見て 「シュリンク付きだから高く売れてる」 と思うだけだと少しもったいないかと 市場が評価しているのは 「シュリンクの有無」そのものじゃなくて 「完品の状態を維持するためにコストと手間をかけて保管していた」 という事実（信頼）なんですよね🤩 この画像のように 角まで",
-      "link": "https://x.com/NinjaMaruTCG/status/2077192286686081265#m",
-      "pubDate": "Wed, 15 Jul 2026 00:43:28 GMT",
-      "relevant": false
-    },
-    {
-      "id": "https://nitter.net/pokecayoyaku/status/2077185811066589410#m",
-      "account": "pokecayoyaku",
-      "text": "【ポケカ抽選情報】 ドラゴンスターでポケモンカード「拡張パック ストームエメラルダ/スターターセットex 3種」の抽選販売受付が開始⚡ 📅受付期間 7月26日 23:59まで 🎯当選発表 7月29日 予定 🛒購入期間 7月31日 ～ 8月2日 🔗応募ページ https://dorasuta.membercard.jp/lottery",
-      "link": "https://x.com/pokecayoyaku/status/2077185811066589410#m",
-      "pubDate": "Wed, 15 Jul 2026 00:17:44 GMT",
-      "relevant": true
     }
   ],
   "log": [
     "pokecachan: OK (https://nitter.net) - 20件",
     "Zabi_pokeka: OK (https://nitter.net) - 20件",
-    "gamegetnavi: OK (https://nitter.net) - 18件",
-    "omusubicororiin: OK (https://nitter.net) - 20件",
-    "pokecayoyaku: OK (https://nitter.net) - 18件",
-    "NinjaMaruTCG: OK (https://nitter.net) - 17件",
+    "gamegetnavi: OK (https://nitter.net) - 19件",
+    "omusubicororiin: OK (https://nitter.net) - 19件",
+    "pokecayoyaku: OK (https://nitter.net) - 17件",
+    "NinjaMaruTCG: OK (https://nitter.net) - 16件",
     "sedokoX: OK (https://nitter.net) - 20件"
   ]
 }
